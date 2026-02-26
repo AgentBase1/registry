@@ -5,8 +5,8 @@
   "founder": "Chris Izworski",
   "base_url": "https://openclaw-sandy-eight.vercel.app",
   "registry_url": "https://openclaw-sandy-eight.vercel.app/registry/",
-  "updated": "2026-02-25",
-  "count": 4,
+  "updated": "2026-02-26",
+  "count": 8,
   "categories": [
     "system-prompts",
     "skills",
@@ -21,8 +21,16 @@
       "slug": "tier1-customer-support",
       "title": "Tier-1 Customer Support Agent",
       "category": "system-prompts",
-      "tags": ["customer-service", "support", "helpdesk", "triage", "escalation"],
-      "agent_type": ["any"],
+      "tags": [
+        "customer-service",
+        "support",
+        "helpdesk",
+        "triage",
+        "escalation"
+      ],
+      "agent_type": [
+        "any"
+      ],
       "quality_score": 92,
       "featured": true,
       "version": "1.0.0",
@@ -34,11 +42,70 @@
       "url": "https://openclaw-sandy-eight.vercel.app/registry/tier1-customer-support.md"
     },
     {
+      "slug": "structured-web-research",
+      "title": "Structured Web Research Skill",
+      "category": "skills",
+      "tags": [
+        "research",
+        "web-search",
+        "synthesis",
+        "citations",
+        "fact-checking",
+        "information-retrieval"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 91,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/structured-web-research.md"
+    },
+    {
+      "slug": "multi-agent-task-handoff",
+      "title": "Multi-Agent Task Decomposition and Handoff Protocol",
+      "category": "orchestration",
+      "tags": [
+        "orchestration",
+        "multi-agent",
+        "task-decomposition",
+        "handoff",
+        "coordinator",
+        "parallel-execution"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 90,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/multi-agent-task-handoff.md"
+    },
+    {
       "slug": "pr-code-review-workflow",
       "title": "Pull Request Code Review Workflow",
       "category": "workflows",
-      "tags": ["code-review", "pull-request", "github", "engineering", "security"],
-      "agent_type": ["any"],
+      "tags": [
+        "code-review",
+        "pull-request",
+        "github",
+        "engineering",
+        "quality-assurance",
+        "security"
+      ],
+      "agent_type": [
+        "any"
+      ],
       "quality_score": 89,
       "featured": true,
       "version": "1.1.0",
@@ -50,11 +117,70 @@
       "url": "https://openclaw-sandy-eight.vercel.app/registry/pr-code-review-workflow.md"
     },
     {
+      "slug": "legal-document-plain-language",
+      "title": "Legal Document Plain Language Pack",
+      "category": "domain-packs",
+      "tags": [
+        "legal",
+        "contracts",
+        "plain-language",
+        "document-review",
+        "terms-of-service",
+        "non-lawyer"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/legal-document-plain-language.md"
+    },
+    {
+      "slug": "data-analysis-business-context",
+      "title": "Data Analysis Context Pack \u2014 Business Analyst Level",
+      "category": "domain-packs",
+      "tags": [
+        "data-analysis",
+        "business-intelligence",
+        "statistics",
+        "sql",
+        "reporting",
+        "non-technical",
+        "interpretation"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/data-analysis-business-context.md"
+    },
+    {
       "slug": "output-safety-filter-general",
-      "title": "Output Safety Filter — General Purpose",
+      "title": "Output Safety Filter \u2014 General Purpose",
       "category": "safety-filters",
-      "tags": ["safety", "moderation", "output-validation", "content-policy", "harm-detection"],
-      "agent_type": ["any"],
+      "tags": [
+        "safety",
+        "moderation",
+        "output-validation",
+        "content-policy",
+        "harm-detection"
+      ],
+      "agent_type": [
+        "any"
+      ],
       "quality_score": 87,
       "featured": false,
       "version": "1.0.0",
@@ -66,20 +192,29 @@
       "url": "https://openclaw-sandy-eight.vercel.app/registry/output-safety-filter-general.md"
     },
     {
-      "slug": "agent-instruction-template",
-      "title": "OpenClaw Submission Template",
-      "category": "tool-definitions",
-      "tags": ["template", "meta", "submission", "getting-started"],
-      "agent_type": ["any"],
-      "quality_score": 95,
+      "slug": "meeting-notes-action-items",
+      "title": "Meeting Notes to Action Items Extractor",
+      "category": "skills",
+      "tags": [
+        "meetings",
+        "productivity",
+        "action-items",
+        "summarization",
+        "task-extraction",
+        "follow-up"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 86,
       "featured": false,
       "version": "1.0.0",
-      "author": "openclaw-team",
-      "submitted": "2026-02-25",
-      "updated": "2026-02-25",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/agent-instruction-template.md"
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/meeting-notes-action-items.md"
     }
   ]
 }
