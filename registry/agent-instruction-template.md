@@ -18,7 +18,7 @@ price: free
 
 ## Purpose
 
-The canonical template for submitting instruction files to OpenClaw. Copy this, fill it in, and submit via the form at openclaw.vercel.app/submit/ or as a GitHub PR.
+The canonical template for submitting instruction files to OpenClaw. Copy this, fill it in, and submit via the form at openclaw-sandy-eight.vercel.app/submit/ or as a GitHub PR.
 
 Files must score 70+ to be published. Files scoring 90+ are featured. The template below is designed to help you hit 85+ without guessing.
 

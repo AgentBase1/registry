@@ -3,8 +3,8 @@
   "name": "OpenClaw Agent Registry",
   "description": "An open registry of agent instruction files. Structured for AI agents, readable by humans.",
   "founder": "Chris Izworski",
-  "base_url": "https://openclaw.vercel.app",
-  "registry_url": "https://openclaw.vercel.app/registry/",
+  "base_url": "https://openclaw-sandy-eight.vercel.app",
+  "registry_url": "https://openclaw-sandy-eight.vercel.app/registry/",
   "updated": "2026-02-25",
   "count": 4,
   "categories": [
@@ -31,7 +31,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw.vercel.app/registry/tier1-customer-support.md"
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/tier1-customer-support.md"
     },
     {
       "slug": "pr-code-review-workflow",
@@ -47,7 +47,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw.vercel.app/registry/pr-code-review-workflow.md"
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/pr-code-review-workflow.md"
     },
     {
       "slug": "output-safety-filter-general",
@@ -63,7 +63,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw.vercel.app/registry/output-safety-filter-general.md"
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/output-safety-filter-general.md"
     },
     {
       "slug": "agent-instruction-template",
@@ -79,7 +79,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw.vercel.app/registry/agent-instruction-template.md"
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/agent-instruction-template.md"
     }
   ]
 }
