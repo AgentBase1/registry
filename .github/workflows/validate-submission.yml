@@ -1,0 +1,202 @@
+name: Validate Submission
+
+on:
+  pull_request:
+    paths:
+      - 'registry/**.md'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Check instruction file
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed
+        run: |
+          FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | grep '^registry/.*\.md$' | grep -v 'index.json')
+          echo "files=$FILES" >> $GITHUB_OUTPUT
+          echo "Changed registry files: $FILES"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate frontmatter and format
+        run: |
+          python3 << 'PYEOF'
+          import yaml, sys, os, re
+
+          REQUIRED_FIELDS = ['title', 'slug', 'category', 'tags', 'version', 'agent_type', 'author', 'submitted', 'updated', 'license', 'price']
+          VALID_CATEGORIES = ['system-prompts', 'skills', 'workflows', 'tool-definitions', 'domain-packs', 'safety-filters', 'orchestration']
+          VALID_LICENSES = ['CC0', 'MIT', 'CC-BY', 'CC-BY-SA', 'Apache-2.0', 'proprietary']
+          GENERIC_TAGS = {'ai', 'assistant', 'helpful', 'chatbot', 'llm', 'prompt'}
+          MIN_TAGS = 3
+
+          # Safety scan - patterns that trigger manual review or rejection
+          HARD_REJECT = [
+              r'how to make.*(bomb|weapon|explosive)',
+              r'bypass.*(safety|filter|restriction|guardrail)',
+              r'ignore (your|all|previous) (instructions|rules|system)',
+              r'jailbreak',
+              r'(scrape|harvest).*(user data|personal data|pii)',
+              r'impersonate.*(person|human|specific)',
+          ]
+          FLAG_FOR_REVIEW = [
+              r'medication|dosage|prescription',
+              r'legal advice|legal counsel',
+              r'financial advice|investment advice',
+              r'vulnerability|exploit|penetration test',
+          ]
+
+          changed_str = os.environ.get('CHANGED_FILES', '')
+          files_raw = changed_str.strip().split()
+          files = [f for f in files_raw if f.endswith('.md') and f.startswith('registry/') and f != 'registry/index.json']
+
+          if not files:
+              # Check env var passed from previous step
+              import subprocess
+              result = subprocess.run(['git', 'diff', '--name-only', 'HEAD~1...HEAD'], capture_output=True, text=True)
+              files = [f for f in result.stdout.strip().split('\n') if f.endswith('.md') and f.startswith('registry/') and f != 'registry/index.json']
+
+          if not files:
+              print("No registry .md files changed — nothing to validate.")
+              sys.exit(0)
+
+          errors = []
+          warnings = []
+          all_slugs = set()
+
+          # Get existing slugs to check uniqueness
+          for existing in os.listdir('registry'):
+              if existing.endswith('.md') and existing != 'agent-instruction-template.md':
+                  all_slugs.add(existing.replace('.md', ''))
+
+          for filepath in files:
+              if not os.path.exists(filepath):
+                  continue
+              print(f"\n--- Checking {filepath} ---")
+              with open(filepath, 'r') as f:
+                  content = f.read()
+
+              # Parse frontmatter
+              if not content.startswith('---'):
+                  errors.append(f"{filepath}: Missing YAML frontmatter (file must start with ---)")
+                  continue
+
+              parts = content.split('---', 2)
+              if len(parts) < 3:
+                  errors.append(f"{filepath}: Malformed frontmatter")
+                  continue
+
+              try:
+                  fm = yaml.safe_load(parts[1])
+              except yaml.YAMLError as e:
+                  errors.append(f"{filepath}: YAML parse error — {e}")
+                  continue
+
+              body = parts[2]
+
+              # Required fields
+              for field in REQUIRED_FIELDS:
+                  if field not in fm or fm[field] is None or str(fm[field]).strip() == '':
+                      errors.append(f"{filepath}: Missing required field '{field}'")
+
+              # Category
+              if fm.get('category') not in VALID_CATEGORIES:
+                  errors.append(f"{filepath}: Invalid category '{fm.get('category')}'. Must be one of: {', '.join(VALID_CATEGORIES)}")
+
+              # Slug matches filename
+              expected_slug = os.path.basename(filepath).replace('.md', '')
+              if fm.get('slug') != expected_slug:
+                  errors.append(f"{filepath}: Slug '{fm.get('slug')}' doesn't match filename '{expected_slug}'")
+
+              # Tags
+              tags = fm.get('tags', [])
+              if not isinstance(tags, list) or len(tags) < MIN_TAGS:
+                  errors.append(f"{filepath}: Need at least {MIN_TAGS} tags (found {len(tags) if isinstance(tags, list) else 0})")
+              else:
+                  generic = [t for t in tags if t.lower() in GENERIC_TAGS]
+                  if generic:
+                      warnings.append(f"{filepath}: Generic tags detected: {generic}. Use more specific tags.")
+
+              # Instruction block present
+              if '## The Instruction' not in body:
+                  errors.append(f"{filepath}: Missing '## The Instruction' section")
+              elif '```' not in body.split('## The Instruction')[1]:
+                  errors.append(f"{filepath}: Instruction section has no fenced code block")
+
+              # Placeholder check
+              placeholder_patterns = ['TODO', 'COMING SOON', 'PLACEHOLDER', 'YOUR INSTRUCTION HERE']
+              for p in placeholder_patterns:
+                  if p.lower() in body.lower():
+                      errors.append(f"{filepath}: Contains placeholder text '{p}' — fill in real content")
+
+              # Safety scan
+              content_lower = content.lower()
+              for pattern in HARD_REJECT:
+                  if re.search(pattern, content_lower):
+                      errors.append(f"{filepath}: SAFETY: Content matches hard-reject pattern '{pattern}' — this will not be published")
+              for pattern in FLAG_FOR_REVIEW:
+                  if re.search(pattern, content_lower):
+                      warnings.append(f"{filepath}: REVIEW: Content matches flag pattern '{pattern}' — will receive extra manual review")
+
+              # Score estimate
+              score = 0
+              if all(f in fm and fm[f] for f in REQUIRED_FIELDS): score += 20
+              if '## Purpose' in body and len(body.split('## Purpose')[1].split('##')[0].strip()) > 50: score += 10
+              if '## Usage' in body and len(body.split('## Usage')[1].split('##')[0].strip()) > 50: score += 10
+              if '## The Instruction' in body and '```' in body.split('## The Instruction')[1]: score += 30
+              tags = fm.get('tags', [])
+              if isinstance(tags, list) and len(tags) >= 3: score += 15
+              if '## Notes' in body or '## Examples' in body: score += 15
+              print(f"  Estimated quality score: {score}/100")
+              if score < 70:
+                  errors.append(f"{filepath}: Estimated quality score {score}/100 is below minimum (70). See scoring rubric in CONTRIBUTING.md")
+              elif score < 90:
+                  print(f"  ✓ Will be published as Standard ({score}/100)")
+              else:
+                  print(f"  ★ Will be Featured ({score}/100)")
+
+          print("\n" + "="*50)
+          if warnings:
+              print("⚠ WARNINGS:")
+              for w in warnings:
+                  print(f"  {w}")
+          if errors:
+              print("\n✗ ERRORS (must fix before merge):")
+              for e in errors:
+                  print(f"  {e}")
+              sys.exit(1)
+          else:
+              print("✓ All checks passed — ready for manual review")
+          PYEOF
+        env:
+          CHANGED_FILES: ${{ steps.changed.outputs.files }}
+
+      - name: Post result comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const outcome = '${{ job.status }}';
+            const passed = outcome === 'success';
+            const body = passed
+              ? `## ✅ Automated checks passed\n\nYour submission passed all format and safety checks. A maintainer will review within 24–48 hours and post your quality score.\n\n**While you wait:** Make sure you've answered all the questions in the PR template above.`
+              : `## ❌ Automated checks failed\n\nYour submission has issues that must be fixed before it can be reviewed. Check the **Actions** tab above for the specific errors.\n\nCommon fixes:\n- Fill in all required frontmatter fields\n- Make sure your instruction text is in a fenced code block under \`## The Instruction\`\n- Use specific tags — not "ai", "assistant", "helpful"\n- Remove any placeholder text\n\nPush a fix to this branch and the checks will re-run automatically.`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body
+            });

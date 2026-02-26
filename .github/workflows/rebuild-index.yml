@@ -1,0 +1,106 @@
+name: Rebuild Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'registry/**.md'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild-index:
+    runs-on: ubuntu-latest
+    name: Rebuild registry/index.json
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Rebuild index.json
+        run: |
+          python3 << 'PYEOF'
+          import yaml, json, os
+          from datetime import date
+
+          entries = []
+          base_url = "https://openclaw-sandy-eight.vercel.app"
+
+          for fname in sorted(os.listdir('registry')):
+              if not fname.endswith('.md') or fname == 'agent-instruction-template.md':
+                  continue
+              slug = fname.replace('.md', '')
+              with open(f'registry/{fname}', 'r') as f:
+                  content = f.read()
+              if not content.startswith('---'):
+                  continue
+              parts = content.split('---', 2)
+              if len(parts) < 3:
+                  continue
+              try:
+                  fm = yaml.safe_load(parts[1])
+              except:
+                  continue
+              if not fm:
+                  continue
+              entry = {
+                  "slug": slug,
+                  "title": fm.get("title", ""),
+                  "category": fm.get("category", ""),
+                  "tags": fm.get("tags", []),
+                  "agent_type": fm.get("agent_type", ["any"]),
+                  "quality_score": fm.get("quality_score") or 0,
+                  "featured": bool(fm.get("featured", False)),
+                  "version": fm.get("version", "1.0.0"),
+                  "author": fm.get("author", ""),
+                  "submitted": str(fm.get("submitted", "")),
+                  "updated": str(fm.get("updated", "")),
+                  "license": fm.get("license", "CC0"),
+                  "price": fm.get("price", "free"),
+                  "url": f"{base_url}/registry/{slug}.md"
+              }
+              entries.append(entry)
+
+          # Sort: featured first, then by quality score desc
+          entries.sort(key=lambda e: (not e['featured'], -e['quality_score']))
+
+          index = {
+              "version": "1.0",
+              "name": "OpenClaw Agent Registry",
+              "description": "An open registry of agent instruction files. Structured for AI agents, readable by humans.",
+              "founder": "Chris Izworski",
+              "base_url": base_url,
+              "registry_url": f"{base_url}/registry/",
+              "updated": str(date.today()),
+              "count": len(entries),
+              "categories": [
+                  "system-prompts", "skills", "workflows", "tool-definitions",
+                  "domain-packs", "safety-filters", "orchestration"
+              ],
+              "entries": entries
+          }
+
+          with open('registry/index.json', 'w') as f:
+              json.dump(index, f, indent=2)
+
+          print(f"Index rebuilt: {len(entries)} entries")
+          for e in entries:
+              print(f"  {e['slug']} (q={e['quality_score']}, featured={e['featured']})")
+          PYEOF
+
+      - name: Commit updated index
+        run: |
+          git config user.name "openclaw-bot"
+          git config user.email "bot@openclaw"
+          git add registry/index.json
+          git diff --staged --quiet || git commit -m "chore: rebuild index.json [skip ci]"
+          git push
