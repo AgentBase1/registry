@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>AgentBase — New Agent Instructions</title>
+  <link>https://agentbase-registry.vercel.app</link>
+  <description>Open registry of agent instruction files — system prompts, skills, workflows, and more. CC0 licensed.</description>
+  <language>en-us</language>
+  <atom:link href="https://agentbase-registry.vercel.app/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Thu, 27 Feb 2026 00:00:00 GMT</lastBuildDate>
+  <item>
+    <title>Tier-1 Customer Support Agent</title>
+    <link>https://agentbase-registry.vercel.app/registry/tier1-customer-support.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/tier1-customer-support.md</guid>
+    <category>system-prompts</category>
+    <description>A system prompt for a front-line customer support agent. Handles common inquiries, triages issues by severity, resolves what it can, and escalates cleanly what </description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Structured Web Research Skill</title>
+    <link>https://agentbase-registry.vercel.app/registry/structured-web-research.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/structured-web-research.md</guid>
+    <category>skills</category>
+    <description>Teaches an agent to conduct disciplined web research on a topic and return a structured, sourced report rather than a stream of loosely connected findings. Addr</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Multi-Agent Task Decomposition and Handoff Protocol</title>
+    <link>https://agentbase-registry.vercel.app/registry/multi-agent-task-handoff.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/multi-agent-task-handoff.md</guid>
+    <category>orchestration</category>
+    <description>An orchestration protocol for a coordinator agent that breaks complex tasks into sub-tasks, assigns them to specialist agents, tracks progress, synthesizes resu</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Pull Request Code Review Workflow</title>
+    <link>https://agentbase-registry.vercel.app/registry/pr-code-review-workflow.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/pr-code-review-workflow.md</guid>
+    <category>workflows</category>
+    <description>A structured workflow for an agent conducting pull request code reviews. Produces consistent, actionable feedback across security, correctness, performance, and</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Legal Document Plain Language Pack</title>
+    <link>https://agentbase-registry.vercel.app/registry/legal-document-plain-language.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/legal-document-plain-language.md</guid>
+    <category>domain-packs</category>
+    <description>A domain context pack that enables an agent to read legal documents and translate them into plain language for non-lawyers. Covers contracts, terms of service, </description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Data Analysis Context Pack — Business Analyst Level</title>
+    <link>https://agentbase-registry.vercel.app/registry/data-analysis-business-context.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/data-analysis-business-context.md</guid>
+    <category>domain-packs</category>
+    <description>A domain context pack that enables an agent to conduct and explain data analysis at a business analyst level — technically competent, but optimized for clarity </description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Output Safety Filter — General Purpose</title>
+    <link>https://agentbase-registry.vercel.app/registry/output-safety-filter-general.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/output-safety-filter-general.md</guid>
+    <category>safety-filters</category>
+    <description>A prompt-level output safety filter for agents operating in consumer-facing contexts. Adds a validation pass before any response is delivered — catching harmful</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Meeting Notes to Action Items Extractor</title>
+    <link>https://agentbase-registry.vercel.app/registry/meeting-notes-action-items.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/meeting-notes-action-items.md</guid>
+    <category>skills</category>
+    <description>Extracts structured action items, decisions, and open questions from raw meeting notes or transcripts. Produces an output that can be sent directly to participa</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Professional Email Drafting Skill</title>
+    <link>https://agentbase-registry.vercel.app/registry/email-drafting-skill.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/email-drafting-skill.md</guid>
+    <category>skills</category>
+    <description>Teaches an agent to draft professional emails that match the sender's intent, relationship context, and desired outcome. Addresses the common failure mode where</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>SQL Query Builder & Explainer</title>
+    <link>https://agentbase-registry.vercel.app/registry/sql-query-builder.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/sql-query-builder.md</guid>
+    <category>skills</category>
+    <description>Teaches an agent to write correct, optimized SQL queries from natural language requests, explain what queries do in plain English, and identify performance issu</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Bug Report Triage Agent</title>
+    <link>https://agentbase-registry.vercel.app/registry/bug-report-triage.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/bug-report-triage.md</guid>
+    <category>workflows</category>
+    <description>Teaches an agent to process incoming bug reports and produce a structured triage output: severity classification, reproduction likelihood, affected surface area</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Content Moderation Filter</title>
+    <link>https://agentbase-registry.vercel.app/registry/content-moderation-filter.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/content-moderation-filter.md</guid>
+    <category>safety</category>
+    <description>Teaches an agent to evaluate user-generated content against a policy framework and return a structured moderation decision with category classification, confide</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Technical Documentation Writer</title>
+    <link>https://agentbase-registry.vercel.app/registry/technical-documentation-writer.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/technical-documentation-writer.md</guid>
+    <category>skills</category>
+    <description>Teaches an agent to write clear, accurate, developer-facing technical documentation: API references, README files, integration guides, changelogs, and how-to gu</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Executive Briefing Summarizer</title>
+    <link>https://agentbase-registry.vercel.app/registry/executive-briefing-summarizer.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/executive-briefing-summarizer.md</guid>
+    <category>skills</category>
+    <description>Teaches an agent to distill long documents, reports, threads, or meeting outputs into tight executive briefings — the format senior decision-makers actually rea</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Sales Outreach Personalization Workflow</title>
+    <link>https://agentbase-registry.vercel.app/registry/sales-outreach-personalization.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/sales-outreach-personalization.md</guid>
+    <category>workflows</category>
+    <description>Teaches an agent to research a prospect and produce a personalized outreach sequence — not a mail-merged template with a first name swapped in, but a genuinely </description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Competitive Intelligence Domain Pack</title>
+    <link>https://agentbase-registry.vercel.app/registry/competitive-intelligence-domain.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/competitive-intelligence-domain.md</guid>
+    <category>domain-packs</category>
+    <description>Equips an agent with the frameworks, vocabulary, and methodology of competitive intelligence analysis. Turns a general-purpose agent into one that thinks like a</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>User Onboarding Assistant</title>
+    <link>https://agentbase-registry.vercel.app/registry/user-onboarding-assistant.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/user-onboarding-assistant.md</guid>
+    <category>system-prompts</category>
+    <description>A system prompt for agents embedded in product onboarding flows. Teaches the agent to guide new users to their first meaningful success — not just through featu</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Changelog & Release Notes Writer</title>
+    <link>https://agentbase-registry.vercel.app/registry/changelog-release-notes.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/changelog-release-notes.md</guid>
+    <category>skills</category>
+    <description>Teaches an agent to transform raw commit logs, PR descriptions, and engineering notes into polished, user-facing release notes and changelogs. Addresses the fai</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>User Interview Simulation</title>
+    <link>https://agentbase-registry.vercel.app/registry/user-interview-simulation.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/user-interview-simulation.md</guid>
+    <category>system-prompts</category>
+    <description>Teaches an agent to roleplay as a realistic user persona for product research, usability testing, and interview practice. Addresses the failure mode of AI inter</description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Contract Review Domain Pack</title>
+    <link>https://agentbase-registry.vercel.app/registry/contract-review-domain.md</link>
+    <guid>https://agentbase-registry.vercel.app/registry/contract-review-domain.md</guid>
+    <category>domain-packs</category>
+    <description>Equips an agent with contract review methodology, standard clause vocabulary, and risk flagging frameworks. Turns a general agent into one that reads contracts </description>
+    <pubDate>Thu, 27 Feb 2026 00:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

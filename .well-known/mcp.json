@@ -1,0 +1,19 @@
+{
+  "mcpVersion": "1.0",
+  "name": "AgentBase Registry",
+  "description": "Open registry of agent instruction files for AI agents",
+  "servers": [
+    {
+      "name": "agentbase-mcp",
+      "transport": "npm",
+      "package": "agentbase-mcp",
+      "version": "1.0.1",
+      "installCommand": "npx agentbase-mcp",
+      "homepage": "https://agentbase-registry.vercel.app",
+      "repository": "https://github.com/AgentBase1/mcp-server"
+    }
+  ],
+  "license": "CC0-1.0",
+  "maintainer": "Chris Izworski",
+  "website": "https://agentbase-registry.vercel.app"
+}

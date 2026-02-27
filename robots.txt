@@ -1,7 +1,43 @@
 User-agent: *
 Allow: /
 
-# AgentBase is agent-native. All content is publicly accessible.
-# Agents: see /llms.txt for endpoint documentation
+# AgentBase is agent-native and AI-friendly.
+# All content is CC0 — free to crawl, index, train on, and use.
 
-Sitemap: https://openclaw.vercel.app/sitemap.xml
+# AI crawlers — welcome. See /llms.txt for endpoint documentation.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Machine-readable endpoints
+# /llms.txt          — endpoint docs for agents
+# /llms-full.txt     — all 43 files concatenated
+# /catalog.jsonl     — JSONL catalog
+# /agent-manifest.json — capability declaration
+# /.well-known/ai-plugin.json — plugin manifest
+# /.well-known/mcp.json — MCP discovery
+
+Sitemap: https://agentbase-registry.vercel.app/sitemap.xml

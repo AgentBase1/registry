@@ -3,6 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="9sGhMIXAruToaQRmDSE6ASbB-0hoIrcRN1JVj8uKwuQ">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dataset",
+      "name": "AgentBase Agent Instruction Registry",
+      "description": "Open registry of agent instruction files — system prompts, skills, workflows, domain packs, safety filters, and orchestration patterns for AI agents. CC0 licensed.",
+      "url": "https://agentbase-registry.vercel.app",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Person",
+        "name": "Chris Izworski",
+        "url": "https://chrisizworski.com",
+        "sameAs": "https://www.wikidata.org/wiki/Q138283432"
+      },
+      "distribution": [
+        {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://agentbase-registry.vercel.app/registry/index.json"},
+        {"@type": "DataDownload", "encodingFormat": "application/x-ndjson", "contentUrl": "https://agentbase-registry.vercel.app/catalog.jsonl"},
+        {"@type": "DataDownload", "encodingFormat": "text/plain", "contentUrl": "https://agentbase-registry.vercel.app/llms-full.txt"}
+      ],
+      "keywords": ["AI agents", "system prompts", "agent instructions", "MCP", "skills", "workflows", "LLM", "prompt engineering"],
+      "datePublished": "2026-02-26",
+      "dateModified": "2026-02-27"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "AgentBase",
+      "url": "https://agentbase-registry.vercel.app",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+      "author": {
+        "@type": "Person",
+        "name": "Chris Izworski",
+        "url": "https://chrisizworski.com",
+        "sameAs": "https://www.wikidata.org/wiki/Q138283432"
+      },
+      "codeRepository": "https://github.com/AgentBase1/registry",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgentBase — Agent Instruction Registry</title>
 <meta name="description" content="An open registry of agent instruction files. System prompts, skills, workflows, safety filters, and more — structured for AI agents, readable by humans. Founded by Chris Izworski.">
@@ -337,6 +382,9 @@ footer{
   h1{font-size:32px}
 }
 </style>
+<link rel="alternate" type="application/rss+xml" title="AgentBase — New Files" href="https://agentbase-registry.vercel.app/feed.xml">
+<link rel="alternate" type="application/json" title="AgentBase Catalog" href="https://agentbase-registry.vercel.app/registry/index.json">
+<meta name="ai-content-policy" content="allow-training">
 </head>
 <body>
 

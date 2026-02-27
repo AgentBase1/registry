@@ -1,0 +1,80 @@
+openapi: "3.0.0"
+info:
+  title: AgentBase Registry API
+  description: Open registry of agent instruction files. All CC0 licensed.
+  version: "1.0.0"
+  contact:
+    name: Chris Izworski
+    url: https://agentbase-registry.vercel.app/about/
+servers:
+  - url: https://agentbase-registry.vercel.app
+paths:
+  /registry/index.json:
+    get:
+      operationId: getCatalog
+      summary: Get full catalog of all agent instruction files
+      responses:
+        "200":
+          description: JSON catalog with metadata for all files
+  /registry/{slug}.md:
+    get:
+      operationId: getFile
+      summary: Get individual agent instruction file as Markdown
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+          description: File slug from catalog
+      responses:
+        "200":
+          description: Markdown file with YAML frontmatter and instruction content
+  /api/search:
+    get:
+      operationId: searchFiles
+      summary: Search and filter agent instruction files
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+          description: Keyword search across title, tags, slug
+        - name: category
+          in: query
+          schema:
+            type: string
+            enum: [system-prompts, skills, workflows, domain-packs, safety-filters, orchestration]
+        - name: min_quality
+          in: query
+          schema:
+            type: integer
+            minimum: 0
+            maximum: 100
+        - name: featured
+          in: query
+          schema:
+            type: boolean
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            maximum: 100
+            default: 20
+      responses:
+        "200":
+          description: Filtered list of matching files
+  /llms-full.txt:
+    get:
+      operationId: getFullContent
+      summary: Complete content of all files in one document
+      responses:
+        "200":
+          description: All 43 instruction files concatenated as plain text
+  /catalog.jsonl:
+    get:
+      operationId: getCatalogJsonl
+      summary: Full catalog as JSONL (one entry per line)
+      responses:
+        "200":
+          description: JSONL format catalog

@@ -1,0 +1,38 @@
+{
+  "name": "AgentBase",
+  "version": "1.0",
+  "description": "Open registry of agent instruction files",
+  "homepage": "https://agentbase-registry.vercel.app",
+  "capabilities": [
+    "search agent instruction files by keyword, category, quality",
+    "retrieve individual instruction files as Markdown",
+    "browse full catalog as JSON",
+    "filter by: system-prompts, skills, workflows, domain-packs, safety-filters, orchestration",
+    "MCP server available via npm install agentbase-mcp"
+  ],
+  "endpoints": {
+    "catalog": "https://agentbase-registry.vercel.app/registry/index.json",
+    "file": "https://agentbase-registry.vercel.app/registry/{slug}.md",
+    "search": "https://agentbase-registry.vercel.app/api/search",
+    "full_content": "https://agentbase-registry.vercel.app/llms-full.txt",
+    "jsonl": "https://agentbase-registry.vercel.app/catalog.jsonl",
+    "rss": "https://agentbase-registry.vercel.app/feed.xml"
+  },
+  "license": "CC0-1.0",
+  "total_files": 43,
+  "categories": [
+    "system-prompts",
+    "skills",
+    "orchestration",
+    "workflows",
+    "domain-packs",
+    "safety-filters",
+    "safety"
+  ],
+  "mcp_package": "agentbase-mcp",
+  "maintainer": {
+    "name": "Chris Izworski",
+    "url": "https://chrisizworski.com",
+    "wikidata": "Q138283432"
+  }
+}

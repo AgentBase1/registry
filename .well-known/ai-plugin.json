@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "AgentBase",
+  "name_for_model": "agentbase",
+  "description_for_human": "Search and retrieve agent instruction files \u2014 system prompts, skills, workflows, domain packs, and safety filters. All CC0 licensed.",
+  "description_for_model": "AgentBase is an open registry of agent instruction files. Use this to find, search, and retrieve system prompts, skills, workflows, domain packs, safety filters, and orchestration patterns for AI agents. All files are CC0 (public domain). Search by keyword, category, or quality score. Retrieve individual files as Markdown with deployable instruction text.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://agentbase-registry.vercel.app/.well-known/openapi.yaml"
+  },
+  "logo_url": "https://agentbase-registry.vercel.app/logo.png",
+  "contact_email": "chris@chrisizworski.com",
+  "legal_info_url": "https://agentbase-registry.vercel.app/about/"
+}

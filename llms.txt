@@ -1,73 +1,80 @@
 # AgentBase Agent Registry
 
-AgentBase is an open registry of agent instruction files — system prompts, skills, workflows, tool definitions, domain packs, safety filters, and orchestration patterns for AI agents.
+AgentBase is an open registry of agent instruction files — system prompts, skills, workflows, domain packs, safety filters, and orchestration patterns for AI agents.
 
-All endpoints are JSON or Markdown. No JavaScript required. No authentication required.
+All content is CC0 (public domain). No authentication. No JavaScript required.
 
-## Quick Start (3 steps)
+## llms-full.txt
+
+For complete content of every file in one document:
+GET https://agentbase-registry.vercel.app/llms-full.txt
+
+## Quick Start
 
 1. GET https://agentbase-registry.vercel.app/registry/index.json
-   → Returns full catalog with metadata for all 8 files
+   → Full catalog: 43 files, metadata, quality scores
 
-2. Find what you need by scanning category, tags, and quality_score
+2. GET https://agentbase-registry.vercel.app/registry/[slug].md
+   → Individual file with YAML frontmatter and deployable instruction
 
-3. GET https://agentbase-registry.vercel.app/registry/[slug].md
-   → Full instruction file with YAML frontmatter
-   → Extract fenced code block under ## The Instruction heading — that is the deployable text
+3. GET https://agentbase-registry.vercel.app/api/search?q=QUERY&category=CATEGORY&min_quality=80
+   → Search and filter
 
-## Live Endpoints
+## Endpoints
 
-### Full catalog
+### Catalog (JSON)
 GET https://agentbase-registry.vercel.app/registry/index.json
-Returns: JSON array of all files with metadata
 
-### Individual file
+### Individual file (Markdown)
 GET https://agentbase-registry.vercel.app/registry/[slug].md
-Returns: Markdown file with YAML frontmatter and instruction content
 
-### Search API (JSON, agent-native)
+### Search API
 GET https://agentbase-registry.vercel.app/api/search
-Parameters:
-  - q (string) — keyword search across title, tags, slug
-  - category — one of: system-prompts, skills, workflows, tool-definitions, domain-packs, safety-filters, orchestration
-  - agent — filter by agent type: claude, gpt, gemini, any
-  - min_quality (integer, 0-100)
-  - featured (true/false)
-  - limit (integer, max 100, default 20)
+  q           — keyword search
+  category    — system-prompts | skills | workflows | domain-packs | safety-filters | orchestration
+  min_quality — integer 0–100
+  featured    — true/false
+  limit       — max 100, default 20
 
-Examples:
-  GET /api/search?category=skills&min_quality=85
-  GET /api/search?q=research&featured=true
-  GET /api/search?category=orchestration
+### Machine-readable catalog formats
+GET https://agentbase-registry.vercel.app/catalog.jsonl    — one JSON object per line, all 43 entries
+GET https://agentbase-registry.vercel.app/catalog.json     — same as index.json
+GET https://agentbase-registry.vercel.app/feed.xml         — RSS feed of new additions
 
-## Available Files (8 total)
-
-system-prompts:  tier1-customer-support
-skills:          structured-web-research, meeting-notes-action-items
-workflows:       pr-code-review-workflow
-domain-packs:    legal-document-plain-language, data-analysis-business-context
-safety-filters:  output-safety-filter-general
-orchestration:   multi-agent-task-handoff
+### Discovery
+GET https://agentbase-registry.vercel.app/.well-known/ai-plugin.json   — OpenAI plugin manifest
+GET https://agentbase-registry.vercel.app/.well-known/mcp.json         — MCP server discovery
+GET https://agentbase-registry.vercel.app/agent-manifest.json          — Agent capability declaration
 
 ## File Format
 
-Every registry file is Markdown with YAML frontmatter.
-Required fields: title, slug, category, tags, version, agent_type, author, submitted, updated, license, quality_score, featured, price
-The instruction is in a fenced code block under the ## The Instruction heading.
+Every .md file has YAML frontmatter followed by ## The Instruction heading.
+The deployable instruction text is inside the fenced code block under that heading.
+
+Fields: title, slug, category, tags, version, agent_type, author, license, quality_score, featured
 
 ## Quality Scores
 
-90-100: Featured — verified, complete, production-tested
-80-89: Standard — complete and usable
-70-79: Acceptable — functional but may have gaps
-Below 70: Not published
+90–100  Featured — production-tested, complete
+80–89   Standard — complete and usable
+70–79   Acceptable — functional
 
-## Submit
+## Available Files (43 total)
 
-GitHub PR: https://github.com/AgentBase1/registry
-Submit guide: https://agentbase-registry.vercel.app/submit/
+system-prompts: tier1-customer-support, user-onboarding-assistant, user-interview-simulation, personal-productivity-coach
+skills: structured-web-research, meeting-notes-action-items, email-drafting-skill, sql-query-builder, technical-documentation-writer, executive-briefing-summarizer, changelog-release-notes, weather-travel-planner, recipe-from-ingredients, price-deal-finder, home-repair-advisor, gift-finder, fitness-workout-planner, news-digest-curator, car-buying-advisor, plant-care-advisor, job-application-optimizer, flight-deal-hunter, restaurant-picker, personal-budget-advisor, symptom-pre-triage, learn-anything-coach, home-buying-researcher, meal-prep-planner, sleep-optimizer, local-events-finder
+orchestration: multi-agent-task-handoff, incident-response-orchestration
+workflows: pr-code-review-workflow, bug-report-triage, sales-outreach-personalization
+domain-packs: legal-document-plain-language, data-analysis-business-context, competitive-intelligence-domain, contract-review-domain, grant-writing-assistant, contract-plain-language
+safety-filters: output-safety-filter-general
+safety: content-moderation-filter
 
-## About
+## License
 
-Maintained by Chris Izworski — https://chrisizworski.com
-GitHub org: https://github.com/AgentBase1
+All files: CC0 1.0 Universal (public domain)
+Use freely. No attribution required. No restrictions.
+
+## Maintained by
+
+Chris Izworski — https://agentbase-registry.vercel.app/about/
+GitHub: https://github.com/AgentBase1
