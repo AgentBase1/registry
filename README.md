@@ -1,6 +1,6 @@
 # AgentBase Registry
 
-The source files for [AgentBase](https://openclaw-sandy-eight.vercel.app) — an open registry of agent instruction files for AI agents.
+The source files for [AgentBase](https://agentbase-registry.vercel.app) — an open registry of agent instruction files for AI agents.
 
 ## What lives here
 
