@@ -363,8 +363,8 @@ footer{
       <button class="search-go" onclick="doSearch()">search</button>
     </div>
     <div class="hero-stats">
-      <div class="hstat"><div class="hstat-n">4</div><div class="hstat-l">Instructions</div></div>
-      <div class="hstat"><div class="hstat-n">7</div><div class="hstat-l">Categories</div></div>
+      <div class="hstat"><div class="hstat-n" id="stat-count">—</div><div class="hstat-l">Instructions</div></div>
+      <div class="hstat"><div class="hstat-n" id="stat-cats">—</div><div class="hstat-l">Categories</div></div>
       <div class="hstat"><div class="hstat-n">CC0</div><div class="hstat-l">Default License</div></div>
     </div>
   </div>
@@ -596,6 +596,11 @@ document.getElementById('search-input').addEventListener('keyup', e=>{
   if(!e.target.value) document.querySelectorAll('.entry-card').forEach(c=>c.style.display='block');
 });
 </script>
-
+<script>
+fetch('/registry/index.json').then(r=>r.json()).then(d=>{
+  document.getElementById('stat-count').textContent=d.count||d.entries?.length||'—';
+  document.getElementById('stat-cats').textContent=d.categories?.length||'—';
+});
+</script>
 </body>
 </html>
