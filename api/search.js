@@ -1,4 +1,4 @@
-const INDEX_URL = 'https://openclaw-sandy-eight.vercel.app/registry/index.json';
+const INDEX_URL = 'https://agentbase-registry.vercel.app/registry/index.json';
 
 export const config = { runtime: 'edge' };
 

@@ -95,7 +95,7 @@ ${fileContent}
 \`\`\`
 
 ---
-*Submitted via web form at openclaw-sandy-eight.vercel.app/submit/*`;
+*Submitted via web form at agentbase-registry.vercel.app/submit/*`;
 
   const githubToken = process.env.GITHUB_TOKEN;
   if (!githubToken) {

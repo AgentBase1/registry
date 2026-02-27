@@ -3,8 +3,8 @@
   "name": "AgentBase",
   "description": "Open registry of agent instruction files for AI agents",
   "founder": "Chris Izworski",
-  "base_url": "https://openclaw-sandy-eight.vercel.app",
-  "registry_url": "https://openclaw-sandy-eight.vercel.app/registry/",
+  "base_url": "https://agentbase-registry.vercel.app",
+  "registry_url": "https://agentbase-registry.vercel.app/registry/",
   "updated": "2026-02-26",
   "count": 43,
   "categories": [
@@ -60,7 +60,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/tier1-customer-support.md"
+      "url": "https://agentbase-registry.vercel.app/registry/tier1-customer-support.md"
     },
     {
       "slug": "structured-web-research",
@@ -85,7 +85,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/structured-web-research.md"
+      "url": "https://agentbase-registry.vercel.app/registry/structured-web-research.md"
     },
     {
       "slug": "multi-agent-task-handoff",
@@ -110,7 +110,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/multi-agent-task-handoff.md"
+      "url": "https://agentbase-registry.vercel.app/registry/multi-agent-task-handoff.md"
     },
     {
       "slug": "pr-code-review-workflow",
@@ -135,7 +135,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/pr-code-review-workflow.md"
+      "url": "https://agentbase-registry.vercel.app/registry/pr-code-review-workflow.md"
     },
     {
       "slug": "legal-document-plain-language",
@@ -160,7 +160,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/legal-document-plain-language.md"
+      "url": "https://agentbase-registry.vercel.app/registry/legal-document-plain-language.md"
     },
     {
       "slug": "data-analysis-business-context",
@@ -186,7 +186,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/data-analysis-business-context.md"
+      "url": "https://agentbase-registry.vercel.app/registry/data-analysis-business-context.md"
     },
     {
       "slug": "output-safety-filter-general",
@@ -210,7 +210,7 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/output-safety-filter-general.md"
+      "url": "https://agentbase-registry.vercel.app/registry/output-safety-filter-general.md"
     },
     {
       "slug": "meeting-notes-action-items",
@@ -235,7 +235,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/meeting-notes-action-items.md"
+      "url": "https://agentbase-registry.vercel.app/registry/meeting-notes-action-items.md"
     },
     {
       "slug": "email-drafting-skill",
@@ -260,7 +260,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/email-drafting-skill.md"
+      "url": "https://agentbase-registry.vercel.app/registry/email-drafting-skill.md"
     },
     {
       "slug": "sql-query-builder",
@@ -286,7 +286,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/sql-query-builder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/sql-query-builder.md"
     },
     {
       "slug": "bug-report-triage",
@@ -312,7 +312,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/bug-report-triage.md"
+      "url": "https://agentbase-registry.vercel.app/registry/bug-report-triage.md"
     },
     {
       "slug": "content-moderation-filter",
@@ -337,7 +337,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/content-moderation-filter.md"
+      "url": "https://agentbase-registry.vercel.app/registry/content-moderation-filter.md"
     },
     {
       "slug": "technical-documentation-writer",
@@ -363,7 +363,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/technical-documentation-writer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/technical-documentation-writer.md"
     },
     {
       "slug": "executive-briefing-summarizer",
@@ -389,7 +389,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/executive-briefing-summarizer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/executive-briefing-summarizer.md"
     },
     {
       "slug": "sales-outreach-personalization",
@@ -415,7 +415,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/sales-outreach-personalization.md"
+      "url": "https://agentbase-registry.vercel.app/registry/sales-outreach-personalization.md"
     },
     {
       "slug": "competitive-intelligence-domain",
@@ -440,7 +440,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/competitive-intelligence-domain.md"
+      "url": "https://agentbase-registry.vercel.app/registry/competitive-intelligence-domain.md"
     },
     {
       "slug": "user-onboarding-assistant",
@@ -466,7 +466,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/user-onboarding-assistant.md"
+      "url": "https://agentbase-registry.vercel.app/registry/user-onboarding-assistant.md"
     },
     {
       "slug": "changelog-release-notes",
@@ -491,7 +491,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/changelog-release-notes.md"
+      "url": "https://agentbase-registry.vercel.app/registry/changelog-release-notes.md"
     },
     {
       "slug": "user-interview-simulation",
@@ -517,7 +517,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/user-interview-simulation.md"
+      "url": "https://agentbase-registry.vercel.app/registry/user-interview-simulation.md"
     },
     {
       "slug": "contract-review-domain",
@@ -544,7 +544,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/contract-review-domain.md"
+      "url": "https://agentbase-registry.vercel.app/registry/contract-review-domain.md"
     },
     {
       "slug": "incident-response-orchestration",
@@ -570,7 +570,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/incident-response-orchestration.md"
+      "url": "https://agentbase-registry.vercel.app/registry/incident-response-orchestration.md"
     },
     {
       "slug": "personal-productivity-coach",
@@ -596,7 +596,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/personal-productivity-coach.md"
+      "url": "https://agentbase-registry.vercel.app/registry/personal-productivity-coach.md"
     },
     {
       "slug": "grant-writing-assistant",
@@ -622,7 +622,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/grant-writing-assistant.md"
+      "url": "https://agentbase-registry.vercel.app/registry/grant-writing-assistant.md"
     },
     {
       "slug": "weather-travel-planner",
@@ -647,7 +647,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/weather-travel-planner.md"
+      "url": "https://agentbase-registry.vercel.app/registry/weather-travel-planner.md"
     },
     {
       "slug": "recipe-from-ingredients",
@@ -671,7 +671,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/recipe-from-ingredients.md"
+      "url": "https://agentbase-registry.vercel.app/registry/recipe-from-ingredients.md"
     },
     {
       "slug": "price-deal-finder",
@@ -696,7 +696,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/price-deal-finder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/price-deal-finder.md"
     },
     {
       "slug": "home-repair-advisor",
@@ -720,7 +720,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/home-repair-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/home-repair-advisor.md"
     },
     {
       "slug": "gift-finder",
@@ -745,7 +745,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/gift-finder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/gift-finder.md"
     },
     {
       "slug": "fitness-workout-planner",
@@ -769,7 +769,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/fitness-workout-planner.md"
+      "url": "https://agentbase-registry.vercel.app/registry/fitness-workout-planner.md"
     },
     {
       "slug": "news-digest-curator",
@@ -794,7 +794,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/news-digest-curator.md"
+      "url": "https://agentbase-registry.vercel.app/registry/news-digest-curator.md"
     },
     {
       "slug": "car-buying-advisor",
@@ -819,7 +819,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/car-buying-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/car-buying-advisor.md"
     },
     {
       "slug": "plant-care-advisor",
@@ -844,7 +844,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/plant-care-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/plant-care-advisor.md"
     },
     {
       "slug": "job-application-optimizer",
@@ -868,7 +868,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/job-application-optimizer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/job-application-optimizer.md"
     },
     {
       "slug": "flight-deal-hunter",
@@ -893,7 +893,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/flight-deal-hunter.md"
+      "url": "https://agentbase-registry.vercel.app/registry/flight-deal-hunter.md"
     },
     {
       "slug": "restaurant-picker",
@@ -918,7 +918,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/restaurant-picker.md"
+      "url": "https://agentbase-registry.vercel.app/registry/restaurant-picker.md"
     },
     {
       "slug": "personal-budget-advisor",
@@ -942,7 +942,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/personal-budget-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/personal-budget-advisor.md"
     },
     {
       "slug": "symptom-pre-triage",
@@ -966,7 +966,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/symptom-pre-triage.md"
+      "url": "https://agentbase-registry.vercel.app/registry/symptom-pre-triage.md"
     },
     {
       "slug": "learn-anything-coach",
@@ -990,7 +990,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/learn-anything-coach.md"
+      "url": "https://agentbase-registry.vercel.app/registry/learn-anything-coach.md"
     },
     {
       "slug": "home-buying-researcher",
@@ -1015,7 +1015,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/home-buying-researcher.md"
+      "url": "https://agentbase-registry.vercel.app/registry/home-buying-researcher.md"
     },
     {
       "slug": "meal-prep-planner",
@@ -1039,7 +1039,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/meal-prep-planner.md"
+      "url": "https://agentbase-registry.vercel.app/registry/meal-prep-planner.md"
     },
     {
       "slug": "contract-plain-language",
@@ -1063,7 +1063,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/contract-plain-language.md"
+      "url": "https://agentbase-registry.vercel.app/registry/contract-plain-language.md"
     },
     {
       "slug": "sleep-optimizer",
@@ -1087,7 +1087,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/sleep-optimizer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/sleep-optimizer.md"
     },
     {
       "slug": "local-events-finder",
@@ -1112,7 +1112,7 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://openclaw-sandy-eight.vercel.app/registry/local-events-finder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/local-events-finder.md"
     }
   ]
 }
