@@ -60,7 +60,8 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/tier1-customer-support.md"
+      "url": "https://agentbase-registry.vercel.app/registry/tier1-customer-support.md",
+      "description": "A system prompt for a front-line customer support agent. Handles common inquiries, triages issues by severity, resolves what it can, and escalates cleanly what "
     },
     {
       "slug": "structured-web-research",
@@ -85,7 +86,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/structured-web-research.md"
+      "url": "https://agentbase-registry.vercel.app/registry/structured-web-research.md",
+      "description": "Teaches an agent to conduct disciplined web research on a topic and return a structured, sourced report rather than a stream of loosely connected findings. Addr"
     },
     {
       "slug": "multi-agent-task-handoff",
@@ -110,7 +112,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/multi-agent-task-handoff.md"
+      "url": "https://agentbase-registry.vercel.app/registry/multi-agent-task-handoff.md",
+      "description": "An orchestration protocol for a coordinator agent that breaks complex tasks into sub-tasks, assigns them to specialist agents, tracks progress, synthesizes resu"
     },
     {
       "slug": "pr-code-review-workflow",
@@ -135,7 +138,8 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/pr-code-review-workflow.md"
+      "url": "https://agentbase-registry.vercel.app/registry/pr-code-review-workflow.md",
+      "description": "A structured workflow for an agent conducting pull request code reviews. Produces consistent, actionable feedback across security, correctness, performance, and"
     },
     {
       "slug": "legal-document-plain-language",
@@ -160,7 +164,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/legal-document-plain-language.md"
+      "url": "https://agentbase-registry.vercel.app/registry/legal-document-plain-language.md",
+      "description": "A domain context pack that enables an agent to read legal documents and translate them into plain language for non-lawyers. Covers contracts, terms of service, "
     },
     {
       "slug": "data-analysis-business-context",
@@ -186,7 +191,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/data-analysis-business-context.md"
+      "url": "https://agentbase-registry.vercel.app/registry/data-analysis-business-context.md",
+      "description": "A domain context pack that enables an agent to conduct and explain data analysis at a business analyst level \u2014 technically competent, but optimized for clarity "
     },
     {
       "slug": "output-safety-filter-general",
@@ -210,7 +216,8 @@
       "updated": "2026-02-25",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/output-safety-filter-general.md"
+      "url": "https://agentbase-registry.vercel.app/registry/output-safety-filter-general.md",
+      "description": "A prompt-level output safety filter for agents operating in consumer-facing contexts. Adds a validation pass before any response is delivered \u2014 catching harmful"
     },
     {
       "slug": "meeting-notes-action-items",
@@ -235,7 +242,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/meeting-notes-action-items.md"
+      "url": "https://agentbase-registry.vercel.app/registry/meeting-notes-action-items.md",
+      "description": "Extracts structured action items, decisions, and open questions from raw meeting notes or transcripts. Produces an output that can be sent directly to participa"
     },
     {
       "slug": "email-drafting-skill",
@@ -260,7 +268,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/email-drafting-skill.md"
+      "url": "https://agentbase-registry.vercel.app/registry/email-drafting-skill.md",
+      "description": "Teaches an agent to draft professional emails that match the sender's intent, relationship context, and desired outcome. Addresses the common failure mode where"
     },
     {
       "slug": "sql-query-builder",
@@ -286,7 +295,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/sql-query-builder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/sql-query-builder.md",
+      "description": "Teaches an agent to write correct, optimized SQL queries from natural language requests, explain what queries do in plain English, and identify performance issu"
     },
     {
       "slug": "bug-report-triage",
@@ -312,7 +322,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/bug-report-triage.md"
+      "url": "https://agentbase-registry.vercel.app/registry/bug-report-triage.md",
+      "description": "Teaches an agent to process incoming bug reports and produce a structured triage output: severity classification, reproduction likelihood, affected surface area"
     },
     {
       "slug": "content-moderation-filter",
@@ -337,7 +348,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/content-moderation-filter.md"
+      "url": "https://agentbase-registry.vercel.app/registry/content-moderation-filter.md",
+      "description": "Teaches an agent to evaluate user-generated content against a policy framework and return a structured moderation decision with category classification, confide"
     },
     {
       "slug": "technical-documentation-writer",
@@ -363,7 +375,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/technical-documentation-writer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/technical-documentation-writer.md",
+      "description": "Teaches an agent to write clear, accurate, developer-facing technical documentation: API references, README files, integration guides, changelogs, and how-to gu"
     },
     {
       "slug": "executive-briefing-summarizer",
@@ -389,7 +402,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/executive-briefing-summarizer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/executive-briefing-summarizer.md",
+      "description": "Teaches an agent to distill long documents, reports, threads, or meeting outputs into tight executive briefings \u2014 the format senior decision-makers actually rea"
     },
     {
       "slug": "sales-outreach-personalization",
@@ -415,7 +429,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/sales-outreach-personalization.md"
+      "url": "https://agentbase-registry.vercel.app/registry/sales-outreach-personalization.md",
+      "description": "Teaches an agent to research a prospect and produce a personalized outreach sequence \u2014 not a mail-merged template with a first name swapped in, but a genuinely "
     },
     {
       "slug": "competitive-intelligence-domain",
@@ -440,7 +455,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/competitive-intelligence-domain.md"
+      "url": "https://agentbase-registry.vercel.app/registry/competitive-intelligence-domain.md",
+      "description": "Equips an agent with the frameworks, vocabulary, and methodology of competitive intelligence analysis. Turns a general-purpose agent into one that thinks like a"
     },
     {
       "slug": "user-onboarding-assistant",
@@ -466,7 +482,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/user-onboarding-assistant.md"
+      "url": "https://agentbase-registry.vercel.app/registry/user-onboarding-assistant.md",
+      "description": "A system prompt for agents embedded in product onboarding flows. Teaches the agent to guide new users to their first meaningful success \u2014 not just through featu"
     },
     {
       "slug": "changelog-release-notes",
@@ -491,7 +508,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/changelog-release-notes.md"
+      "url": "https://agentbase-registry.vercel.app/registry/changelog-release-notes.md",
+      "description": "Teaches an agent to transform raw commit logs, PR descriptions, and engineering notes into polished, user-facing release notes and changelogs. Addresses the fai"
     },
     {
       "slug": "user-interview-simulation",
@@ -517,7 +535,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/user-interview-simulation.md"
+      "url": "https://agentbase-registry.vercel.app/registry/user-interview-simulation.md",
+      "description": "Teaches an agent to roleplay as a realistic user persona for product research, usability testing, and interview practice. Addresses the failure mode of AI inter"
     },
     {
       "slug": "contract-review-domain",
@@ -544,7 +563,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/contract-review-domain.md"
+      "url": "https://agentbase-registry.vercel.app/registry/contract-review-domain.md",
+      "description": "Equips an agent with contract review methodology, standard clause vocabulary, and risk flagging frameworks. Turns a general agent into one that reads contracts "
     },
     {
       "slug": "incident-response-orchestration",
@@ -570,7 +590,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/incident-response-orchestration.md"
+      "url": "https://agentbase-registry.vercel.app/registry/incident-response-orchestration.md",
+      "description": "An orchestration pattern for agents acting as incident commanders during production outages. Teaches the agent to run a structured incident response process: ra"
     },
     {
       "slug": "personal-productivity-coach",
@@ -596,7 +617,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/personal-productivity-coach.md"
+      "url": "https://agentbase-registry.vercel.app/registry/personal-productivity-coach.md",
+      "description": "A system prompt for agents acting as personal productivity coaches. The agent helps users clarify priorities, break down overwhelming tasks, build sustainable h"
     },
     {
       "slug": "grant-writing-assistant",
@@ -622,7 +644,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/grant-writing-assistant.md"
+      "url": "https://agentbase-registry.vercel.app/registry/grant-writing-assistant.md",
+      "description": "Equips an agent with the vocabulary, structure, and evaluation criteria of grant writing for nonprofits, research institutions, and social enterprises. Teaches "
     },
     {
       "slug": "weather-travel-planner",
@@ -647,7 +670,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/weather-travel-planner.md"
+      "url": "https://agentbase-registry.vercel.app/registry/weather-travel-planner.md",
+      "description": "Plans trips around actual weather \u2014 not just destination wishlist. Checks forecasts, flags weather risks, suggests what to pack, and builds a day-by-day itinera"
     },
     {
       "slug": "recipe-from-ingredients",
@@ -671,7 +695,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/recipe-from-ingredients.md"
+      "url": "https://agentbase-registry.vercel.app/registry/recipe-from-ingredients.md",
+      "description": "Generates real, practical recipes from whatever ingredients the user actually has. No grocery run required. Handles dietary restrictions, cooking skill levels, "
     },
     {
       "slug": "price-deal-finder",
@@ -696,7 +721,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/price-deal-finder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/price-deal-finder.md",
+      "description": "Researches the best current price for a product across retailers, checks for active coupon codes, evaluates whether it's worth waiting for a sale, and flags kno"
     },
     {
       "slug": "home-repair-advisor",
@@ -720,7 +746,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/home-repair-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/home-repair-advisor.md",
+      "description": "Diagnoses home repair problems, explains what's actually wrong (not just symptoms), tells the user whether it's a realistic DIY job or requires a pro, provides "
     },
     {
       "slug": "gift-finder",
@@ -745,7 +772,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/gift-finder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/gift-finder.md",
+      "description": "Finds genuinely good gift ideas based on who the person actually is \u2014 not generic \"gifts for dads\" listicle content. Asks the right questions, generates specifi"
     },
     {
       "slug": "fitness-workout-planner",
@@ -769,7 +797,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/fitness-workout-planner.md"
+      "url": "https://agentbase-registry.vercel.app/registry/fitness-workout-planner.md",
+      "description": "Builds a realistic, personalized workout plan based on actual goals, available time, equipment, and current fitness level. Not a generic 12-week program \u2014 a pla"
     },
     {
       "slug": "news-digest-curator",
@@ -794,7 +823,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/news-digest-curator.md"
+      "url": "https://agentbase-registry.vercel.app/registry/news-digest-curator.md",
+      "description": "Builds a concise, personalized news briefing on topics the user actually cares about \u2014 not algorithmic outrage bait. Searches current sources, summarizes what m"
     },
     {
       "slug": "car-buying-advisor",
@@ -819,7 +849,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/car-buying-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/car-buying-advisor.md",
+      "description": "Researches vehicles, finds fair market prices, explains what options/packages are actually worth paying for, identifies known reliability issues, and gives the "
     },
     {
       "slug": "plant-care-advisor",
@@ -844,7 +875,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/plant-care-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/plant-care-advisor.md",
+      "description": "Identifies plants, diagnoses what's wrong with them, and gives specific care instructions \u2014 not generic advice. Handles houseplants, garden plants, vegetables, "
     },
     {
       "slug": "job-application-optimizer",
@@ -868,7 +900,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/job-application-optimizer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/job-application-optimizer.md",
+      "description": "Tailors resumes and cover letters to specific job postings, identifies gaps between the candidate's profile and the job requirements, suggests how to frame expe"
     },
     {
       "slug": "flight-deal-hunter",
@@ -893,7 +926,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/flight-deal-hunter.md"
+      "url": "https://agentbase-registry.vercel.app/registry/flight-deal-hunter.md",
+      "description": "Researches flights across multiple search approaches, finds the best price for a given route, explains the tradeoffs of different options (layovers, bags, timin"
     },
     {
       "slug": "restaurant-picker",
@@ -918,7 +952,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/restaurant-picker.md"
+      "url": "https://agentbase-registry.vercel.app/registry/restaurant-picker.md",
+      "description": "Finds genuinely good restaurants for a specific occasion \u2014 not the first Yelp result. Accounts for the vibe, the actual occasion, dietary needs, budget, and gro"
     },
     {
       "slug": "personal-budget-advisor",
@@ -942,7 +977,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/personal-budget-advisor.md"
+      "url": "https://agentbase-registry.vercel.app/registry/personal-budget-advisor.md",
+      "description": "Helps people understand where their money is going, build a realistic budget, find places to cut without misery, and make a concrete plan for a specific financi"
     },
     {
       "slug": "symptom-pre-triage",
@@ -966,7 +1002,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/symptom-pre-triage.md"
+      "url": "https://agentbase-registry.vercel.app/registry/symptom-pre-triage.md",
+      "description": "Helps people figure out how urgently they need medical attention \u2014 ER now, urgent care today, doctor this week, or wait and see. Asks the right questions to und"
     },
     {
       "slug": "learn-anything-coach",
@@ -990,7 +1027,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/learn-anything-coach.md"
+      "url": "https://agentbase-registry.vercel.app/registry/learn-anything-coach.md",
+      "description": "Teaches people new subjects or skills using the most effective learning methods \u2014 not just explaining things. Uses the Feynman technique, spaced repetition cues"
     },
     {
       "slug": "home-buying-researcher",
@@ -1015,7 +1053,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/home-buying-researcher.md"
+      "url": "https://agentbase-registry.vercel.app/registry/home-buying-researcher.md",
+      "description": "Researches neighborhoods, analyzes listings, explains what to look for in a home inspection, calculates the real cost of homeownership, and helps buyers underst"
     },
     {
       "slug": "meal-prep-planner",
@@ -1039,7 +1078,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/meal-prep-planner.md"
+      "url": "https://agentbase-registry.vercel.app/registry/meal-prep-planner.md",
+      "description": "Builds a realistic weekly meal plan and shopping list based on how many people are eating, dietary needs, cooking skill, and available time. Designed to reduce "
     },
     {
       "slug": "contract-plain-language",
@@ -1063,7 +1103,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/contract-plain-language.md"
+      "url": "https://agentbase-registry.vercel.app/registry/contract-plain-language.md",
+      "description": "Translates contracts and legal agreements into plain English, flags the clauses that actually matter, identifies unusual or one-sided terms, and tells people wh"
     },
     {
       "slug": "sleep-optimizer",
@@ -1087,7 +1128,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/sleep-optimizer.md"
+      "url": "https://agentbase-registry.vercel.app/registry/sleep-optimizer.md",
+      "description": "Diagnoses what's actually disrupting someone's sleep, builds a personalized sleep improvement plan based on sleep science, and gives specific, concrete changes "
     },
     {
       "slug": "local-events-finder",
@@ -1112,7 +1154,8 @@
       "updated": "2026-02-26",
       "license": "CC0",
       "price": "free",
-      "url": "https://agentbase-registry.vercel.app/registry/local-events-finder.md"
+      "url": "https://agentbase-registry.vercel.app/registry/local-events-finder.md",
+      "description": "Finds genuinely interesting things to do in a given area for a specific timeframe \u2014 not just the top tourist attractions everyone already knows. Researches curr"
     }
   ]
 }
