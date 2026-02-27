@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — AgentBase</title>
+<meta name="description" content="AgentBase is built by Chris Izworski — emergency services technologist and former 911 director. An open registry of agent instruction files for the agentic web.">
+<link rel="canonical" href="https://openclaw-sandy-eight.vercel.app/about/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0e12;--surface:#13161c;--surface2:#1a1e26;--border:#1f2430;--border2:#2a3040;--text:#d4d8e0;--muted:#5a6075;--amber:#f0a500;--amber-dim:#c88800;--amber-glow:rgba(240,165,0,0.12);--display:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6}
+nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:var(--display);font-size:19px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+.logo-mark{width:28px;height:28px;background:var(--amber);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#000}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:var(--muted);text-decoration:none;font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:4px;transition:all .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--text);background:var(--surface)}
+.nav-links .cta{background:var(--amber);color:#000;font-weight:500;margin-left:8px}
+.nav-links .cta:hover{background:var(--amber-dim)}
+
+.body{max-width:720px;margin:0 auto;padding:64px 32px 80px}
+.label{font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--display);font-size:40px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:32px}
+
+.section-block{margin-bottom:40px}
+.section-block h2{font-family:var(--display);font-size:18px;font-weight:700;color:#fff;margin-bottom:12px}
+.section-block p{color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:12px}
+.section-block p strong{color:var(--text);font-weight:500}
+.section-block p a{color:var(--amber);text-decoration:none}
+.section-block p a:hover{color:var(--amber-dim)}
+
+.divider{border:none;border-top:1px solid var(--border);margin:36px 0}
+
+.principles{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:8px}
+.principles li{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:4px;padding:16px 20px;
+  display:flex;gap:16px;align-items:flex-start;
+}
+.p-num{font-family:var(--mono);font-size:11px;color:var(--amber);flex-shrink:0;padding-top:2px}
+.p-text{font-size:14px;color:var(--muted);line-height:1.6}
+.p-text strong{color:var(--text);font-weight:500;display:block;margin-bottom:4px}
+
+.contact-block{
+  background:var(--surface);border:1px solid var(--border);
+  border-left:3px solid var(--amber);
+  border-radius:4px;padding:24px;margin-top:32px;
+}
+.contact-block p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:8px}
+.contact-block p:last-child{margin-bottom:0}
+.contact-block a{color:var(--amber);text-decoration:none}
+.contact-block a:hover{color:var(--amber-dim)}
+
+footer{border-top:1px solid var(--border);padding:32px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:var(--display);font-size:16px;font-weight:700;color:var(--muted)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{font-family:var(--mono);font-size:11px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--amber)}
+@media(max-width:600px){.body{padding:48px 16px 64px}nav{padding:0 16px}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo"><div class="logo-mark">OC</div>AgentBase</a>
+  <div class="nav-links">
+    <a href="/browse/">Browse</a>
+    <a href="/registry/index.json">API</a>
+    <a href="/about/" class="active">About</a>
+    <a href="/submit/" class="cta">Submit</a>
+  </div>
+</nav>
+
+<div class="body">
+  <div class="label">// about this project</div>
+  <h1>AgentBase</h1>
+
+  <div class="section-block">
+    <p>AgentBase is built by <strong>Chris Izworski</strong> — emergency services technologist, former Michigan 911 Executive Director, and someone who has spent a lot of time watching AI agents fail because their instructions were bad.</p>
+    <p>The web was not built for agents. Sites are full of JavaScript walls, inconsistent formatting, pagination traps, and content that assumes a human is doing the reading. Agents trying to retrieve instruction files hit all of it. There was no clean, structured place to find and serve agent instructions. So this is that place.</p>
+    <p>It is a start. The catalog is small. The infrastructure is intentionally simple — flat files, clean endpoints, no authentication required. That is by design. Agents shouldn't need to jump through hoops to get what they need.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-block">
+    <h2>Editorial Standards</h2>
+    <p>Not everything submitted gets published. Every file is reviewed against these principles before it goes live:</p>
+    <ul class="principles">
+      <li>
+        <span class="p-num">01</span>
+        <span class="p-text"><strong>It has to actually work</strong>Load the instruction into an agent and it should do what the file says it does. Vague, untested, or placeholder instructions are rejected.</span>
+      </li>
+      <li>
+        <span class="p-num">02</span>
+        <span class="p-text"><strong>It cannot facilitate harm</strong>Instructions that help agents deceive, manipulate, harm, or exploit people are not published here. This is enforced with automated scanning and manual review.</span>
+      </li>
+      <li>
+        <span class="p-num">03</span>
+        <span class="p-text"><strong>It has to be legal</strong>Submissions must be original work or properly licensed. Instructions that facilitate illegal activity are rejected. If you built it, you can submit it.</span>
+      </li>
+      <li>
+        <span class="p-num">04</span>
+        <span class="p-text"><strong>Quality scores are honest</strong>A 70 is a 70. A 95 is a 95. Featured picks are my call and I stand behind them. The scoring rubric is public — you can see exactly how scores are calculated.</span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section-block">
+    <h2>Where This Goes</h2>
+    <p>Phase 1 is a free registry. Files are CC0 or permissively licensed. Anyone can fetch them. The infrastructure is agent-native from day one — <code style="font-family:var(--mono);font-size:13px;color:var(--amber)">/registry/index.json</code>, raw markdown endpoints, <code style="font-family:var(--mono);font-size:13px;color:var(--amber)">/llms.txt</code>.</p>
+    <p>Eventually: paid listings, micro-transactions for premium instruction sets, and direct agent submission when the trust infrastructure is in place. The model that makes sense for the agentic web — whatever that turns out to be — will get built here as it becomes clear what agents actually need.</p>
+    <p>The goal is a registry agents can trust. Instructions that are accurate, versioned, rated, and safe. That takes time to build. We're building it.</p>
+  </div>
+
+  <hr class="divider">
+
+  <div class="contact-block">
+    <p><strong style="color:var(--text);font-weight:500">Chris Izworski</strong></p>
+    <p>Emergency services technologist · Former Michigan 911 Executive Director · Solutions Consultant, Prepared</p>
+    <p><a href="https://chrisizworski.com" target="_blank" rel="noopener">chrisizworski.com</a> &nbsp;·&nbsp; <a href="https://github.com/AgentBase1" target="_blank" rel="noopener">github.com/AgentBase1</a></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">AgentBase</div>
+    <div class="footer-links">
+      <a href="/browse/">Browse</a>
+      <a href="/registry/index.json">API</a>
+      <a href="/llms.txt">llms.txt</a>
+      <a href="/submit/">Submit</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

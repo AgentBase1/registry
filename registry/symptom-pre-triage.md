@@ -5,7 +5,7 @@ category: skills
 tags: [health, medical, symptoms, triage, wellness]
 version: 1.0.0
 agent_type: [any]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-26
 updated: 2026-02-26
 license: CC0

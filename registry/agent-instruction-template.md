@@ -1,11 +1,11 @@
 ---
-title: "OpenClaw Submission Template"
+title: "AgentBase Submission Template"
 slug: agent-instruction-template
 category: tool-definitions
 tags: [template, meta, submission, getting-started]
 version: 1.0.0
 agent_type: [any]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-25
 updated: 2026-02-25
 license: CC0
@@ -14,11 +14,11 @@ featured: false
 price: free
 ---
 
-# OpenClaw Submission Template
+# AgentBase Submission Template
 
 ## Purpose
 
-The canonical template for submitting instruction files to OpenClaw. Copy this, fill it in, and submit via the form at openclaw-sandy-eight.vercel.app/submit/ or as a GitHub PR.
+The canonical template for submitting instruction files to AgentBase. Copy this, fill it in, and submit via the form at openclaw-sandy-eight.vercel.app/submit/ or as a GitHub PR.
 
 Files must score 70+ to be published. Files scoring 90+ are featured. The template below is designed to help you hit 85+ without guessing.
 

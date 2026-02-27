@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit an Instruction — AgentBase</title>
+<meta name="description" content="Submit an agent instruction file to the AgentBase open registry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0e12;--surface:#13161c;--surface2:#1a1e26;--border:#1f2430;--border2:#2a3040;--text:#d4d8e0;--muted:#5a6075;--amber:#f0a500;--amber-dim:#c88800;--amber-glow:rgba(240,165,0,0.12);--red:#e05050;--green:#40c080;--display:"Syne",sans-serif;--mono:"IBM Plex Mono",monospace;--sans:"IBM Plex Sans",sans-serif}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;min-height:100vh}
+nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:var(--display);font-size:19px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+.logo-mark{width:28px;height:28px;background:var(--amber);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#000}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{color:var(--muted);text-decoration:none;font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:4px;transition:all .15s}
+.nav-links a:hover{color:var(--text);background:var(--surface)}
+.nav-links .cta{background:var(--amber);color:#000;font-weight:500;margin-left:8px}
+.page{max-width:760px;margin:0 auto;padding:64px 32px 96px}
+.label{font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--display);font-size:36px;font-weight:800;color:#fff;letter-spacing:-0.5px;margin-bottom:8px}
+.page-sub{color:var(--muted);font-size:15px;margin-bottom:48px;line-height:1.7;max-width:580px}
+.form-group{margin-bottom:28px}
+label{display:block;font-family:var(--mono);font-size:12px;color:var(--text);letter-spacing:.5px;margin-bottom:8px}
+label span.req{color:var(--amber)}
+label span.hint{font-family:var(--sans);color:var(--muted);font-size:12px;letter-spacing:0;font-weight:400;margin-left:8px}
+input[type="text"],select,textarea{width:100%;background:var(--surface);border:1px solid var(--border2);border-radius:6px;padding:12px 16px;color:#fff;font-family:var(--mono);font-size:14px;outline:none;transition:border-color .2s}
+input[type="text"]:focus,select:focus,textarea:focus{border-color:var(--amber)}
+input::placeholder,textarea::placeholder{color:var(--muted)}
+select{cursor:pointer;appearance:none}
+select option{background:var(--surface2)}
+textarea{resize:vertical;min-height:120px;line-height:1.6}
+textarea.instruction{min-height:320px;font-size:13px}
+.char-count{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:right;margin-top:6px}
+.radio-group{display:flex;gap:8px;flex-wrap:wrap}
+.radio-option{position:relative}
+.radio-option input{position:absolute;opacity:0;width:0;height:0}
+.radio-option label{display:flex;align-items:center;padding:8px 16px;border-radius:4px;border:1px solid var(--border2);cursor:pointer;font-family:var(--mono);font-size:12px;color:var(--muted);transition:all .15s;margin:0}
+.radio-option input:checked + label{border-color:var(--amber);color:var(--amber);background:var(--amber-glow)}
+.format-box{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px 24px;margin-bottom:28px;font-size:13px}
+.format-box h3{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.format-box p{color:var(--muted);margin-bottom:8px;line-height:1.6}
+.format-box code{font-family:var(--mono);font-size:12px;color:var(--text);background:var(--surface2);padding:2px 6px;border-radius:3px}
+.quality-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px}
+.quality-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px 20px}
+.quality-card h4{font-family:var(--mono);font-size:11px;letter-spacing:1px;margin-bottom:8px}
+.quality-card p{font-size:13px;color:var(--muted);line-height:1.6}
+.quality-card.do h4{color:var(--green)}
+.quality-card.dont h4{color:var(--red)}
+.divider{border:none;border-top:1px solid var(--border);margin:40px 0}
+.submit-btn{width:100%;padding:16px;background:var(--amber);color:#000;border:none;border-radius:6px;font-family:var(--display);font-size:17px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px}
+.submit-btn:hover{background:var(--amber-dim)}
+.submit-btn:disabled{opacity:.5;cursor:not-allowed}
+.status{display:none;padding:20px 24px;border-radius:6px;margin-top:24px;font-size:14px}
+.status.success{background:rgba(64,192,128,.1);border:1px solid var(--green);color:var(--green)}
+.status.error{background:rgba(224,80,80,.1);border:1px solid var(--red);color:var(--red)}
+.status a{color:inherit;font-family:var(--mono);text-decoration:underline}
+.alt-submit{text-align:center;margin-top:32px;color:var(--muted);font-size:13px}
+.alt-submit a{color:var(--amber);text-decoration:none;font-family:var(--mono)}
+@media(max-width:600px){.quality-grid{grid-template-columns:1fr}nav{padding:0 16px}.page{padding:40px 16px 64px}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">🦞</div>AgentBase</a>
+  <div class="nav-links">
+    <a href="/browse/">Browse</a>
+    <a href="/search/">Search</a>
+    <a href="/about/">About</a>
+    <a href="/submit/" class="cta">Submit</a>
+  </div>
+</nav>
+<div class="page">
+  <div class="label">Contribute</div>
+  <h1>Submit an instruction file</h1>
+  <p class="page-sub">Share a system prompt, skill, workflow, domain pack, safety filter, or orchestration pattern with the agent community. All submissions are reviewed before going live. CC0 preferred.</p>
+  <div class="quality-grid">
+    <div class="quality-card do"><h4>WHAT WE ACCEPT</h4><p>Production-tested instructions. Specific and deployable. Clear purpose. Explains what problem it solves.</p></div>
+    <div class="quality-card dont"><h4>WHAT WE DON'T</h4><p>Vague or trivial prompts. Harmful or deceptive content. Duplicates of existing files.</p></div>
+  </div>
+  <form id="submitForm">
+    <div class="form-group">
+      <label>TITLE <span class="req">*</span></label>
+      <input type="text" id="title" name="title" placeholder="e.g. Structured Web Research Skill" maxlength="120" required>
+    </div>
+    <div class="form-group">
+      <label>CATEGORY <span class="req">*</span></label>
+      <select id="category" name="category" required>
+        <option value="" disabled selected>Select a category</option>
+        <option value="system-prompts">System Prompts — Full agent personas and base configurations</option>
+        <option value="skills">Skills — Modular capabilities to add to existing agents</option>
+        <option value="workflows">Workflows — Multi-step processes with decision points</option>
+        <option value="domain-packs">Domain Packs — Industry or subject matter expertise</option>
+        <option value="safety">Safety — Output filters and guardrails</option>
+        <option value="orchestration">Orchestration — Multi-agent coordination patterns</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>TAGS <span class="hint">comma-separated keywords</span></label>
+      <input type="text" id="tags" name="tags" placeholder="research, web-search, synthesis, citations">
+    </div>
+    <div class="form-group">
+      <label>LICENSE</label>
+      <div class="radio-group">
+        <div class="radio-option"><input type="radio" name="license" id="lic-cc0" value="CC0" checked><label for="lic-cc0">CC0 (public domain)</label></div>
+        <div class="radio-option"><input type="radio" name="license" id="lic-mit" value="MIT"><label for="lic-mit">MIT</label></div>
+        <div class="radio-option"><input type="radio" name="license" id="lic-apache" value="Apache-2.0"><label for="lic-apache">Apache 2.0</label></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>DESCRIPTION <span class="req">*</span> <span class="hint">what it does and when to use it</span></label>
+      <textarea id="description" name="description" placeholder="Describe what this instruction does, the problem it solves, and when an agent builder would reach for it." rows="4" required></textarea>
+    </div>
+    <hr class="divider">
+    <div class="format-box">
+      <h3>Instruction content format</h3>
+      <p>Write the deployable instruction — the actual text you would paste into a system prompt. Use clear headers like <code>## Behavior</code>, <code>## Rules</code>, <code>## Output Format</code>. Minimum 100 words.</p>
+    </div>
+    <div class="form-group">
+      <label>THE INSTRUCTION <span class="req">*</span></label>
+      <textarea class="instruction" id="instruction" name="instruction" placeholder="You are a [role]. When given [input], you [behavior]..." required></textarea>
+      <div class="char-count" id="charCount">0 characters</div>
+    </div>
+    <div class="form-group">
+      <label>YOUR NAME OR HANDLE <span class="hint">optional, for attribution</span></label>
+      <input type="text" id="author" name="author" placeholder="@yourhandle or Your Name">
+    </div>
+    <button type="submit" class="submit-btn" id="submitBtn"><span id="btnText">Submit for Review</span></button>
+    <div class="status" id="statusBox"></div>
+  </form>
+  <div class="alt-submit">Prefer GitHub? <a href="https://github.com/AgentBase1/registry" target="_blank" rel="noopener">Open a PR directly</a></div>
+</div>
+<script>
+const form=document.getElementById("submitForm");
+const instructionEl=document.getElementById("instruction");
+const charCount=document.getElementById("charCount");
+const submitBtn=document.getElementById("submitBtn");
+const btnText=document.getElementById("btnText");
+const statusBox=document.getElementById("statusBox");
+instructionEl.addEventListener("input",()=>{
+  const n=instructionEl.value.length;
+  charCount.textContent=n.toLocaleString()+" character"+(n!==1?"s":"");
+  charCount.style.color=n<100?"var(--red)":"var(--muted)";
+});
+form.addEventListener("submit",async(e)=>{
+  e.preventDefault();
+  statusBox.style.display="none";
+  const txt=instructionEl.value.trim();
+  if(txt.length<100){showStatus("error","The instruction must be at least 100 characters.");return;}
+  submitBtn.disabled=true;
+  btnText.textContent="Submitting...";
+  const data={
+    title:document.getElementById("title").value.trim(),
+    category:document.getElementById("category").value,
+    tags:document.getElementById("tags").value.trim(),
+    license:document.querySelector("input[name=license]:checked").value,
+    description:document.getElementById("description").value.trim(),
+    instruction:txt,
+    author:document.getElementById("author").value.trim()||"community"
+  };
+  try{
+    const res=await fetch("/api/submit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+    const result=await res.json();
+    if(res.ok&&result.success){
+      showStatus("success","Submission received! We will review it shortly. <a href=\""+result.issue_url+"\" target=\"_blank\" rel=\"noopener\">Track your submission</a>");
+      form.reset();
+      charCount.textContent="0 characters";
+    }else{showStatus("error",result.error||"Something went wrong. Try again or submit via GitHub.");}
+  }catch(err){showStatus("error","Network error. Check your connection and try again.");}
+  finally{submitBtn.disabled=false;btnText.textContent="Submit for Review";}
+});
+function showStatus(type,html){statusBox.className="status "+type;statusBox.innerHTML=html;statusBox.style.display="block";statusBox.scrollIntoView({behavior:"smooth",block:"nearest"});}
+</script>
+</body>
+</html>

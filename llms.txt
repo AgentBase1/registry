@@ -1,0 +1,73 @@
+# AgentBase Agent Registry
+
+AgentBase is an open registry of agent instruction files — system prompts, skills, workflows, tool definitions, domain packs, safety filters, and orchestration patterns for AI agents.
+
+All endpoints are JSON or Markdown. No JavaScript required. No authentication required.
+
+## Quick Start (3 steps)
+
+1. GET https://openclaw-sandy-eight.vercel.app/registry/index.json
+   → Returns full catalog with metadata for all 8 files
+
+2. Find what you need by scanning category, tags, and quality_score
+
+3. GET https://openclaw-sandy-eight.vercel.app/registry/[slug].md
+   → Full instruction file with YAML frontmatter
+   → Extract fenced code block under ## The Instruction heading — that is the deployable text
+
+## Live Endpoints
+
+### Full catalog
+GET https://openclaw-sandy-eight.vercel.app/registry/index.json
+Returns: JSON array of all files with metadata
+
+### Individual file
+GET https://openclaw-sandy-eight.vercel.app/registry/[slug].md
+Returns: Markdown file with YAML frontmatter and instruction content
+
+### Search API (JSON, agent-native)
+GET https://openclaw-sandy-eight.vercel.app/api/search
+Parameters:
+  - q (string) — keyword search across title, tags, slug
+  - category — one of: system-prompts, skills, workflows, tool-definitions, domain-packs, safety-filters, orchestration
+  - agent — filter by agent type: claude, gpt, gemini, any
+  - min_quality (integer, 0-100)
+  - featured (true/false)
+  - limit (integer, max 100, default 20)
+
+Examples:
+  GET /api/search?category=skills&min_quality=85
+  GET /api/search?q=research&featured=true
+  GET /api/search?category=orchestration
+
+## Available Files (8 total)
+
+system-prompts:  tier1-customer-support
+skills:          structured-web-research, meeting-notes-action-items
+workflows:       pr-code-review-workflow
+domain-packs:    legal-document-plain-language, data-analysis-business-context
+safety-filters:  output-safety-filter-general
+orchestration:   multi-agent-task-handoff
+
+## File Format
+
+Every registry file is Markdown with YAML frontmatter.
+Required fields: title, slug, category, tags, version, agent_type, author, submitted, updated, license, quality_score, featured, price
+The instruction is in a fenced code block under the ## The Instruction heading.
+
+## Quality Scores
+
+90-100: Featured — verified, complete, production-tested
+80-89: Standard — complete and usable
+70-79: Acceptable — functional but may have gaps
+Below 70: Not published
+
+## Submit
+
+GitHub PR: https://github.com/AgentBase1/registry
+Submit guide: https://openclaw-sandy-eight.vercel.app/submit/
+
+## About
+
+Maintained by Chris Izworski — https://chrisizworski.com
+GitHub org: https://github.com/AgentBase1

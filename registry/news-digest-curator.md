@@ -5,7 +5,7 @@ category: skills
 tags: [news, research, web-research, summarization, daily-brief]
 version: 1.0.0
 agent_type: [web-browsing, research]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-26
 updated: 2026-02-26
 license: CC0

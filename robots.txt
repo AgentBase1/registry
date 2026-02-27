@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# AgentBase is agent-native. All content is publicly accessible.
+# Agents: see /llms.txt for endpoint documentation
+
+Sitemap: https://openclaw.vercel.app/sitemap.xml

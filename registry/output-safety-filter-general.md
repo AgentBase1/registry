@@ -5,7 +5,7 @@ category: safety-filters
 tags: [safety, moderation, output-validation, content-policy, harm-detection]
 version: 1.0.0
 agent_type: [any]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-25
 updated: 2026-02-25
 license: CC0

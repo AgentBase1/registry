@@ -5,7 +5,7 @@ category: workflows
 tags: [code-review, pull-request, github, engineering, quality-assurance, security]
 version: 1.1.0
 agent_type: [any]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-25
 updated: 2026-02-25
 license: CC0

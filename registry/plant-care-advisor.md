@@ -5,7 +5,7 @@ category: skills
 tags: [plants, gardening, houseplants, identification, care]
 version: 1.0.0
 agent_type: [vision, any]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-26
 updated: 2026-02-26
 license: CC0

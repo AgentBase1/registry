@@ -5,7 +5,7 @@ category: skills
 tags: [cooking, recipes, food, meal-planning, pantry]
 version: 1.0.0
 agent_type: [any]
-author: openclaw-team
+author: agentbase-team
 submitted: 2026-02-26
 updated: 2026-02-26
 license: CC0
