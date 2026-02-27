@@ -6,15 +6,36 @@
   "base_url": "https://openclaw-sandy-eight.vercel.app",
   "registry_url": "https://openclaw-sandy-eight.vercel.app/registry/",
   "updated": "2026-02-26",
-  "count": 8,
+  "count": 43,
   "categories": [
-    "system-prompts",
-    "skills",
-    "workflows",
-    "tool-definitions",
-    "domain-packs",
-    "safety-filters",
-    "orchestration"
+    {
+      "name": "system-prompts",
+      "count": 4
+    },
+    {
+      "name": "skills",
+      "count": 26
+    },
+    {
+      "name": "orchestration",
+      "count": 2
+    },
+    {
+      "name": "workflows",
+      "count": 3
+    },
+    {
+      "name": "domain-packs",
+      "count": 6
+    },
+    {
+      "name": "safety-filters",
+      "count": 1
+    },
+    {
+      "name": "safety",
+      "count": 1
+    }
   ],
   "entries": [
     {
@@ -215,6 +236,883 @@
       "license": "CC0",
       "price": "free",
       "url": "https://openclaw-sandy-eight.vercel.app/registry/meeting-notes-action-items.md"
+    },
+    {
+      "slug": "email-drafting-skill",
+      "title": "Professional Email Drafting Skill",
+      "category": "skills",
+      "tags": [
+        "email",
+        "writing",
+        "communication",
+        "tone",
+        "professional",
+        "business"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/email-drafting-skill.md"
+    },
+    {
+      "slug": "sql-query-builder",
+      "title": "SQL Query Builder & Explainer",
+      "category": "skills",
+      "tags": [
+        "sql",
+        "database",
+        "data",
+        "query",
+        "analytics",
+        "postgresql",
+        "mysql"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 89,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/sql-query-builder.md"
+    },
+    {
+      "slug": "bug-report-triage",
+      "title": "Bug Report Triage Agent",
+      "category": "workflows",
+      "tags": [
+        "bugs",
+        "triage",
+        "engineering",
+        "support",
+        "product",
+        "severity",
+        "QA"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/bug-report-triage.md"
+    },
+    {
+      "slug": "content-moderation-filter",
+      "title": "Content Moderation Filter",
+      "category": "safety",
+      "tags": [
+        "moderation",
+        "safety",
+        "content-policy",
+        "UGC",
+        "trust-and-safety",
+        "classification"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 91,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/content-moderation-filter.md"
+    },
+    {
+      "slug": "technical-documentation-writer",
+      "title": "Technical Documentation Writer",
+      "category": "skills",
+      "tags": [
+        "documentation",
+        "writing",
+        "technical",
+        "API",
+        "developer",
+        "docs",
+        "README"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 90,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/technical-documentation-writer.md"
+    },
+    {
+      "slug": "executive-briefing-summarizer",
+      "title": "Executive Briefing Summarizer",
+      "category": "skills",
+      "tags": [
+        "summarization",
+        "executive",
+        "briefing",
+        "reports",
+        "TLDR",
+        "business",
+        "communication"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/executive-briefing-summarizer.md"
+    },
+    {
+      "slug": "sales-outreach-personalization",
+      "title": "Sales Outreach Personalization Workflow",
+      "category": "workflows",
+      "tags": [
+        "sales",
+        "outreach",
+        "personalization",
+        "SDR",
+        "prospecting",
+        "cold-email",
+        "B2B"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 86,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/sales-outreach-personalization.md"
+    },
+    {
+      "slug": "competitive-intelligence-domain",
+      "title": "Competitive Intelligence Domain Pack",
+      "category": "domain-packs",
+      "tags": [
+        "competitive-intelligence",
+        "strategy",
+        "market-research",
+        "analysis",
+        "business",
+        "product"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/competitive-intelligence-domain.md"
+    },
+    {
+      "slug": "user-onboarding-assistant",
+      "title": "User Onboarding Assistant",
+      "category": "system-prompts",
+      "tags": [
+        "onboarding",
+        "UX",
+        "SaaS",
+        "customer-success",
+        "product",
+        "activation",
+        "new-users"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 86,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/user-onboarding-assistant.md"
+    },
+    {
+      "slug": "changelog-release-notes",
+      "title": "Changelog & Release Notes Writer",
+      "category": "skills",
+      "tags": [
+        "changelog",
+        "release-notes",
+        "product",
+        "writing",
+        "developer",
+        "communication"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 85,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/changelog-release-notes.md"
+    },
+    {
+      "slug": "user-interview-simulation",
+      "title": "User Interview Simulation",
+      "category": "system-prompts",
+      "tags": [
+        "UX",
+        "research",
+        "user-interviews",
+        "product",
+        "personas",
+        "design",
+        "simulation"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 84,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/user-interview-simulation.md"
+    },
+    {
+      "slug": "contract-review-domain",
+      "title": "Contract Review Domain Pack",
+      "category": "domain-packs",
+      "tags": [
+        "legal",
+        "contracts",
+        "review",
+        "NDA",
+        "SaaS",
+        "risk",
+        "business",
+        "compliance"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 86,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/contract-review-domain.md"
+    },
+    {
+      "slug": "incident-response-orchestration",
+      "title": "Incident Response Orchestration",
+      "category": "orchestration",
+      "tags": [
+        "incident-response",
+        "on-call",
+        "SRE",
+        "DevOps",
+        "outage",
+        "reliability",
+        "runbook"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/incident-response-orchestration.md"
+    },
+    {
+      "slug": "personal-productivity-coach",
+      "title": "Personal Productivity Coach",
+      "category": "system-prompts",
+      "tags": [
+        "productivity",
+        "coaching",
+        "GTD",
+        "planning",
+        "habits",
+        "focus",
+        "time-management"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 85,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/personal-productivity-coach.md"
+    },
+    {
+      "slug": "grant-writing-assistant",
+      "title": "Grant Writing Assistant",
+      "category": "domain-packs",
+      "tags": [
+        "grants",
+        "nonprofit",
+        "writing",
+        "fundraising",
+        "proposals",
+        "government",
+        "foundation"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 85,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "agentbase-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/grant-writing-assistant.md"
+    },
+    {
+      "slug": "weather-travel-planner",
+      "title": "Weather-Aware Travel Planner",
+      "category": "skills",
+      "tags": [
+        "travel",
+        "weather",
+        "planning",
+        "itinerary",
+        "web-research"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 91,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/weather-travel-planner.md"
+    },
+    {
+      "slug": "recipe-from-ingredients",
+      "title": "Cook What You Have",
+      "category": "skills",
+      "tags": [
+        "cooking",
+        "recipes",
+        "food",
+        "meal-planning",
+        "pantry"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 90,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/recipe-from-ingredients.md"
+    },
+    {
+      "slug": "price-deal-finder",
+      "title": "Best Price Finder",
+      "category": "skills",
+      "tags": [
+        "shopping",
+        "price-comparison",
+        "deals",
+        "research",
+        "web-research"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 89,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/price-deal-finder.md"
+    },
+    {
+      "slug": "home-repair-advisor",
+      "title": "Home Repair Advisor",
+      "category": "skills",
+      "tags": [
+        "home",
+        "repair",
+        "diy",
+        "maintenance",
+        "troubleshooting"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/home-repair-advisor.md"
+    },
+    {
+      "slug": "gift-finder",
+      "title": "Gift Finder",
+      "category": "skills",
+      "tags": [
+        "gifts",
+        "shopping",
+        "recommendations",
+        "personal",
+        "occasions"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 88,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/gift-finder.md"
+    },
+    {
+      "slug": "fitness-workout-planner",
+      "title": "Personal Workout Planner",
+      "category": "skills",
+      "tags": [
+        "fitness",
+        "workout",
+        "exercise",
+        "health",
+        "planning"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/fitness-workout-planner.md"
+    },
+    {
+      "slug": "news-digest-curator",
+      "title": "Personalized News Digest",
+      "category": "skills",
+      "tags": [
+        "news",
+        "research",
+        "web-research",
+        "summarization",
+        "daily-brief"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 90,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/news-digest-curator.md"
+    },
+    {
+      "slug": "car-buying-advisor",
+      "title": "Car Buying Research Agent",
+      "category": "skills",
+      "tags": [
+        "cars",
+        "buying",
+        "research",
+        "negotiation",
+        "automotive"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 89,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/car-buying-advisor.md"
+    },
+    {
+      "slug": "plant-care-advisor",
+      "title": "Plant Care Advisor",
+      "category": "skills",
+      "tags": [
+        "plants",
+        "gardening",
+        "houseplants",
+        "identification",
+        "care"
+      ],
+      "agent_type": [
+        "vision",
+        "any"
+      ],
+      "quality_score": 86,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/plant-care-advisor.md"
+    },
+    {
+      "slug": "job-application-optimizer",
+      "title": "Job Application Optimizer",
+      "category": "skills",
+      "tags": [
+        "career",
+        "resume",
+        "cover-letter",
+        "job-search",
+        "hiring"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/job-application-optimizer.md"
+    },
+    {
+      "slug": "flight-deal-hunter",
+      "title": "Flight Deal Hunter",
+      "category": "skills",
+      "tags": [
+        "travel",
+        "flights",
+        "deals",
+        "research",
+        "web-research"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/flight-deal-hunter.md"
+    },
+    {
+      "slug": "restaurant-picker",
+      "title": "Restaurant Picker",
+      "category": "skills",
+      "tags": [
+        "food",
+        "restaurants",
+        "local",
+        "recommendations",
+        "dining"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 85,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/restaurant-picker.md"
+    },
+    {
+      "slug": "personal-budget-advisor",
+      "title": "Personal Budget Advisor",
+      "category": "skills",
+      "tags": [
+        "finance",
+        "budgeting",
+        "money",
+        "personal-finance",
+        "savings"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/personal-budget-advisor.md"
+    },
+    {
+      "slug": "symptom-pre-triage",
+      "title": "Medical Symptom Pre-Triage",
+      "category": "skills",
+      "tags": [
+        "health",
+        "medical",
+        "symptoms",
+        "triage",
+        "wellness"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 85,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/symptom-pre-triage.md"
+    },
+    {
+      "slug": "learn-anything-coach",
+      "title": "Learn Anything Coach",
+      "category": "skills",
+      "tags": [
+        "learning",
+        "education",
+        "study",
+        "skills",
+        "teaching"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 89,
+      "featured": true,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/learn-anything-coach.md"
+    },
+    {
+      "slug": "home-buying-researcher",
+      "title": "Home Buying Research Agent",
+      "category": "skills",
+      "tags": [
+        "real-estate",
+        "home-buying",
+        "research",
+        "finance",
+        "housing"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 87,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/home-buying-researcher.md"
+    },
+    {
+      "slug": "meal-prep-planner",
+      "title": "Weekly Meal Prep Planner",
+      "category": "skills",
+      "tags": [
+        "cooking",
+        "meal-prep",
+        "food",
+        "planning",
+        "health"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 86,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/meal-prep-planner.md"
+    },
+    {
+      "slug": "contract-plain-language",
+      "title": "Contract Plain Language Reviewer",
+      "category": "domain-packs",
+      "tags": [
+        "legal",
+        "contracts",
+        "documents",
+        "review",
+        "plain-language"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 88,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/contract-plain-language.md"
+    },
+    {
+      "slug": "sleep-optimizer",
+      "title": "Sleep Optimizer",
+      "category": "skills",
+      "tags": [
+        "sleep",
+        "health",
+        "wellness",
+        "habits",
+        "productivity"
+      ],
+      "agent_type": [
+        "any"
+      ],
+      "quality_score": 84,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/sleep-optimizer.md"
+    },
+    {
+      "slug": "local-events-finder",
+      "title": "Local Events & Things To Do Finder",
+      "category": "skills",
+      "tags": [
+        "local",
+        "events",
+        "activities",
+        "entertainment",
+        "web-research"
+      ],
+      "agent_type": [
+        "web-browsing",
+        "research"
+      ],
+      "quality_score": 85,
+      "featured": false,
+      "version": "1.0.0",
+      "author": "openclaw-team",
+      "submitted": "2026-02-26",
+      "updated": "2026-02-26",
+      "license": "CC0",
+      "price": "free",
+      "url": "https://openclaw-sandy-eight.vercel.app/registry/local-events-finder.md"
     }
   ]
 }
