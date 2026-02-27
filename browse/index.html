@@ -10,8 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0c0e12;--surface:#13161c;--surface2:#1a1e26;--border:#1f2430;--border2:#2a3040;--text:#d4d8e0;--muted:#5a6075;--amber:#f0a500;--amber-dim:#c88800;--amber-glow:rgba(240,165,0,0.12);--red:#e05050;--green:#40c080;--blue:#5090e0;--display:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif}
-html{scroll-behavior:smooth}
+:root{--bg:#0c0e12;--surface:#13161c;--surface2:#1a1e26;--border:#1f2430;--border2:#2a3040;--text:#d4d8e0;--muted:#5a6075;--amber:#f0a500;--amber-dim:#c88800;--display:'Syne',sans-serif;--mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6}
 nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:56px}
 .logo{font-family:var(--display);font-size:19px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
@@ -21,25 +20,18 @@ nav{position:sticky;top:0;z-index:100;background:rgba(12,14,18,0.92);backdrop-fi
 .nav-links a:hover{color:var(--text);background:var(--surface)}
 .nav-links .cta{background:var(--amber);color:#000;font-weight:500;margin-left:8px}
 .nav-links .cta:hover{background:var(--amber-dim)}
-
 .page-header{max-width:1100px;margin:0 auto;padding:48px 32px 32px}
 h1{font-family:var(--display);font-size:32px;font-weight:800;color:#fff;letter-spacing:-0.5px;margin-bottom:8px}
 .page-sub{color:var(--muted);font-size:14px}
-
 .layout{max-width:1100px;margin:0 auto;padding:0 32px 64px;display:grid;grid-template-columns:200px 1fr;gap:32px}
-
-/* Sidebar filters */
-.filters{}
 .filter-section{margin-bottom:28px}
 .filter-title{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
 .filter-list{list-style:none}
 .filter-list li{margin-bottom:2px}
-.filter-list a{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;color:var(--muted);text-decoration:none;font-size:13px;font-family:var(--mono);border-radius:3px;transition:all .15s;font-size:12px}
-.filter-list a:hover,.filter-list a.active{background:var(--surface);color:var(--text)}
-.filter-list a.active{border-left:2px solid var(--amber);padding-left:8px;color:var(--amber)}
+.filter-btn{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;color:var(--muted);font-size:12px;font-family:var(--mono);border-radius:3px;transition:all .15s;cursor:pointer;background:none;border:none;width:100%;text-align:left}
+.filter-btn:hover,.filter-btn.active{background:var(--surface);color:var(--text)}
+.filter-btn.active{border-left:2px solid var(--amber);padding-left:8px;color:var(--amber)}
 .fcount{font-size:10px;color:var(--muted);background:var(--border);padding:1px 6px;border-radius:10px}
-
-/* Entry list */
 .entries{display:flex;flex-direction:column;gap:8px}
 .entry-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px 24px;text-decoration:none;color:inherit;transition:border-color .15s;display:block}
 .entry-card:hover{border-color:var(--border2)}
@@ -47,19 +39,18 @@ h1{font-family:var(--display);font-size:32px;font-weight:800;color:#fff;letter-s
 .entry-title{font-family:var(--display);font-size:16px;font-weight:600;color:#fff;line-height:1.3}
 .entry-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .qscore{font-family:var(--mono);font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px}
-.q-high{background:#0f2a18;color:var(--green);border:1px solid #1a4a28}
+.q-high{background:#0f2a18;color:#40c080;border:1px solid #1a4a28}
+.q-mid{background:#1a1a0a;color:#c0a000;border:1px solid #2a2a10}
 .cat-badge{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
 .entry-desc{font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5}
 .entry-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .entry-tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-family:var(--mono);font-size:10px;color:var(--muted);background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:2px}
 .entry-actions{display:flex;gap:12px;align-items:center}
-.entry-actions a{font-family:var(--mono);font-size:11px;color:var(--amber);text-decoration:none;transition:color .15s}
-.entry-actions a:hover{color:var(--amber-dim)}
+.entry-actions a{font-family:var(--mono);font-size:11px;color:var(--amber);text-decoration:none}
 .entry-actions a.raw{color:var(--muted)}
-.entry-actions a.raw:hover{color:var(--text)}
 .featured-dot{width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block;margin-right:6px}
-
+.loading{color:var(--muted);font-family:var(--mono);font-size:13px;padding:32px 0}
 footer{border-top:1px solid var(--border);padding:32px}
 .footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-logo{font-family:var(--display);font-size:16px;font-weight:700;color:var(--muted)}
@@ -71,7 +62,7 @@ footer{border-top:1px solid var(--border);padding:32px}
 </head>
 <body>
 <nav>
-  <a href="/" class="logo"><div class="logo-mark">OC</div>AgentBase</a>
+  <a href="/" class="logo"><div class="logo-mark">AB</div>AgentBase</a>
   <div class="nav-links">
     <a href="/browse/">Browse</a>
     <a href="/registry/index.json">API</a>
@@ -79,97 +70,29 @@ footer{border-top:1px solid var(--border);padding:32px}
     <a href="/submit/" class="cta">Submit</a>
   </div>
 </nav>
-
 <div class="page-header">
   <h1>All Instructions</h1>
-  <p class="page-sub">4 files across 7 categories — filter by category or agent type</p>
+  <p class="page-sub" id="subtitle">Loading...</p>
 </div>
-
 <div class="layout">
   <aside class="filters">
     <div class="filter-section">
       <div class="filter-title">Category</div>
-      <ul class="filter-list">
-        <li><a href="/browse/" class="active">All <span class="fcount">4</span></a></li>
-        <li><a href="/browse/system-prompts/">System Prompts <span class="fcount">1</span></a></li>
-        <li><a href="/browse/skills/">Skills <span class="fcount">0</span></a></li>
-        <li><a href="/browse/workflows/">Workflows <span class="fcount">1</span></a></li>
-        <li><a href="/browse/tool-definitions/">Tool Definitions <span class="fcount">1</span></a></li>
-        <li><a href="/browse/domain-packs/">Domain Packs <span class="fcount">0</span></a></li>
-        <li><a href="/browse/safety-filters/">Safety Filters <span class="fcount">1</span></a></li>
-        <li><a href="/browse/orchestration/">Orchestration <span class="fcount">0</span></a></li>
+      <ul class="filter-list" id="category-filters">
+        <li><button class="filter-btn active" data-category="all">All <span class="fcount" id="count-all">—</span></button></li>
       </ul>
     </div>
     <div class="filter-section">
-      <div class="filter-title">Agent Type</div>
-      <ul class="filter-list">
-        <li><a href="/browse/" class="active">All</a></li>
-        <li><a href="/browse/?agent=claude">Claude</a></li>
-        <li><a href="/browse/?agent=gpt">GPT</a></li>
-        <li><a href="/browse/?agent=any">Any</a></li>
-      </ul>
-    </div>
-    <div class="filter-section">
-      <div class="filter-title">License</div>
-      <ul class="filter-list">
-        <li><a href="/browse/" class="active">All</a></li>
-        <li><a href="/browse/?license=cc0">CC0</a></li>
-        <li><a href="/browse/?license=mit">MIT</a></li>
+      <div class="filter-title">Quality</div>
+      <ul class="filter-list" id="quality-filters">
+        <li><button class="filter-btn active" data-quality="all">All</button></li>
+        <li><button class="filter-btn" data-quality="90">90+ Featured</button></li>
+        <li><button class="filter-btn" data-quality="80">80+ Good</button></li>
       </ul>
     </div>
   </aside>
-
-  <div class="entries">
-    <a class="entry-card" href="/file/tier1-customer-support/">
-      <div class="entry-top">
-        <div class="entry-title"><span class="featured-dot"></span>Tier-1 Customer Support Agent</div>
-        <div class="entry-right"><span class="qscore q-high">92</span><span class="cat-badge">system-prompt</span></div>
-      </div>
-      <div class="entry-desc">A front-line support agent that handles common inquiries, triages by severity, resolves what it can, and escalates cleanly. Built for high-volume, consistent tone, and clean handoffs to human agents.</div>
-      <div class="entry-meta">
-        <div class="entry-tags"><span class="tag">customer-service</span><span class="tag">support</span><span class="tag">triage</span><span class="tag">escalation</span></div>
-        <div class="entry-actions"><a href="/registry/tier1-customer-support.md" class="raw">raw .md</a><a href="/file/tier1-customer-support/">view →</a></div>
-      </div>
-    </a>
-
-    <a class="entry-card" href="/file/pr-code-review-workflow/">
-      <div class="entry-top">
-        <div class="entry-title"><span class="featured-dot"></span>Pull Request Code Review Workflow</div>
-        <div class="entry-right"><span class="qscore q-high">89</span><span class="cat-badge">workflow</span></div>
-      </div>
-      <div class="entry-desc">Structured code review across security, correctness, performance, and style. Outputs a GitHub-ready review with severity labels — BLOCKING, IMPORTANT, SUGGESTION, PRAISE.</div>
-      <div class="entry-meta">
-        <div class="entry-tags"><span class="tag">code-review</span><span class="tag">github</span><span class="tag">security</span><span class="tag">engineering</span></div>
-        <div class="entry-actions"><a href="/registry/pr-code-review-workflow.md" class="raw">raw .md</a><a href="/file/pr-code-review-workflow/">view →</a></div>
-      </div>
-    </a>
-
-    <a class="entry-card" href="/file/output-safety-filter-general/">
-      <div class="entry-top">
-        <div class="entry-title">Output Safety Filter — General Purpose</div>
-        <div class="entry-right"><span class="qscore q-high">87</span><span class="cat-badge">safety-filter</span></div>
-      </div>
-      <div class="entry-desc">A second-pass output validation layer. Catches harm facilitation, prompt injection echoes, PII exposure, and misleading claims before delivery to users.</div>
-      <div class="entry-meta">
-        <div class="entry-tags"><span class="tag">safety</span><span class="tag">moderation</span><span class="tag">prompt-injection</span><span class="tag">content-policy</span></div>
-        <div class="entry-actions"><a href="/registry/output-safety-filter-general.md" class="raw">raw .md</a><a href="/file/output-safety-filter-general/">view →</a></div>
-      </div>
-    </a>
-
-    <a class="entry-card" href="/file/agent-instruction-template/">
-      <div class="entry-top">
-        <div class="entry-title">AgentBase Submission Template</div>
-        <div class="entry-right"><span class="qscore q-high">95</span><span class="cat-badge">tool-definition</span></div>
-      </div>
-      <div class="entry-desc">The canonical template for submitting instruction files to AgentBase. Designed to help new submissions hit 85+ quality score. Includes scoring breakdown and common rejection reasons.</div>
-      <div class="entry-meta">
-        <div class="entry-tags"><span class="tag">template</span><span class="tag">meta</span><span class="tag">submission</span><span class="tag">getting-started</span></div>
-        <div class="entry-actions"><a href="/registry/agent-instruction-template.md" class="raw">raw .md</a><a href="/file/agent-instruction-template/">view →</a></div>
-      </div>
-    </a>
-  </div>
+  <div class="entries" id="entries"><div class="loading">Loading registry...</div></div>
 </div>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">AgentBase</div>
@@ -181,5 +104,56 @@ footer{border-top:1px solid var(--border);padding:32px}
     </div>
   </div>
 </footer>
+<script>
+let all=[], cat='all', qual='all';
+
+async function load(){
+  const d=await(await fetch('/registry/index.json')).json();
+  all=d.entries||[];
+  document.getElementById('subtitle').textContent=`${all.length} files across ${d.categories.length} categories`;
+  document.getElementById('count-all').textContent=all.length;
+  const fl=document.getElementById('category-filters');
+  d.categories.forEach(c=>{
+    const li=document.createElement('li');
+    li.innerHTML=`<button class="filter-btn" data-category="${c.name}">${c.name} <span class="fcount">${c.count}</span></button>`;
+    fl.appendChild(li);
+  });
+  document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',function(){
+    cat=this.dataset.category;
+    document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));
+    this.classList.add('active');
+    render();
+  }));
+  document.querySelectorAll('[data-quality]').forEach(b=>b.addEventListener('click',function(){
+    qual=this.dataset.quality;
+    document.querySelectorAll('[data-quality]').forEach(x=>x.classList.remove('active'));
+    this.classList.add('active');
+    render();
+  }));
+  render();
+}
+
+function render(){
+  let f=all;
+  if(cat!=='all') f=f.filter(e=>e.category===cat);
+  if(qual!=='all') f=f.filter(e=>(e.quality_score||0)>=parseInt(qual));
+  const c=document.getElementById('entries');
+  if(!f.length){c.innerHTML='<div class="loading">No results.</div>';return;}
+  c.innerHTML=f.map(e=>{
+    const qc=(e.quality_score||0)>=88?'q-high':'q-mid';
+    const fd=e.featured?'<span class="featured-dot"></span>':'';
+    const tags=(e.tags||[]).slice(0,4).map(t=>`<span class="tag">${t}</span>`).join('');
+    return `<a class="entry-card" href="/registry/${e.slug}.md">
+      <div class="entry-top"><div class="entry-title">${fd}${e.title}</div>
+      <div class="entry-right"><span class="qscore ${qc}">${e.quality_score||'—'}</span><span class="cat-badge">${e.category}</span></div></div>
+      <div class="entry-desc">${e.description||''}</div>
+      <div class="entry-meta"><div class="entry-tags">${tags}</div>
+      <div class="entry-actions"><a href="/registry/${e.slug}.md" class="raw">raw .md</a><a href="/registry/${e.slug}.md">view →</a></div></div>
+    </a>`;
+  }).join('');
+}
+
+load();
+</script>
 </body>
 </html>
