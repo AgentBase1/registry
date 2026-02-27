@@ -402,49 +402,8 @@ footer{
     <div class="section-title">Categories</div>
     <a href="/browse/" class="section-link">browse all →</a>
   </div>
-  <div class="cat-grid">
-    <a href="/browse/system-prompts/" class="cat-card" style="--cat-color:#5090e0">
-      <div class="cat-icon">⬡</div>
-      <div class="cat-name">System Prompts</div>
-      <div class="cat-desc">Full agent identity definitions — who the agent is, how it behaves, its constraints</div>
-      <div class="cat-count">1 file</div>
-    </a>
-    <a href="/browse/skills/" class="cat-card" style="--cat-color:#40c080">
-      <div class="cat-icon">◈</div>
-      <div class="cat-name">Skills</div>
-      <div class="cat-desc">Scoped capability modules — teach an agent to do one specific thing well</div>
-      <div class="cat-count">0 files</div>
-    </a>
-    <a href="/browse/workflows/" class="cat-card" style="--cat-color:#f0a500">
-      <div class="cat-icon">◎</div>
-      <div class="cat-name">Workflows</div>
-      <div class="cat-desc">Multi-step process instructions — sequential or conditional logic for complex tasks</div>
-      <div class="cat-count">1 file</div>
-    </a>
-    <a href="/browse/tool-definitions/" class="cat-card" style="--cat-color:#c080f0">
-      <div class="cat-icon">◻</div>
-      <div class="cat-name">Tool Definitions</div>
-      <div class="cat-desc">Function schemas, API call patterns, MCP server configs, tool usage instructions</div>
-      <div class="cat-count">1 file</div>
-    </a>
-    <a href="/browse/domain-packs/" class="cat-card" style="--cat-color:#e08050">
-      <div class="cat-icon">◆</div>
-      <div class="cat-name">Domain Packs</div>
-      <div class="cat-desc">Deep field context — 911, legal, medical, finance, engineering, and more</div>
-      <div class="cat-count">0 files</div>
-    </a>
-    <a href="/browse/safety-filters/" class="cat-card" style="--cat-color:#e05050">
-      <div class="cat-icon">◉</div>
-      <div class="cat-name">Safety Filters</div>
-      <div class="cat-desc">Output validation, content filtering, harm detection, prompt injection defense</div>
-      <div class="cat-count">1 file</div>
-    </a>
-    <a href="/browse/orchestration/" class="cat-card" style="--cat-color:#50c0e0">
-      <div class="cat-icon">⬟</div>
-      <div class="cat-name">Orchestration</div>
-      <div class="cat-desc">Multi-agent coordination, handoff protocols, agent-to-agent communication</div>
-      <div class="cat-count">0 files</div>
-    </a>
+  <div class="cat-grid" id="cat-grid">
+    <!-- populated by JS from index.json -->
   </div>
 </div>
 
@@ -599,8 +558,36 @@ document.getElementById('search-input').addEventListener('keyup', e=>{
 </script>
 <script>
 fetch('/registry/index.json').then(r=>r.json()).then(d=>{
+  // Stats
   document.getElementById('stat-count').textContent=d.count||d.entries?.length||'—';
   document.getElementById('stat-cats').textContent=d.categories?.length||'—';
+
+  // Category metadata — icon, color, description
+  const meta={
+    'system-prompts':{icon:'⬡',color:'#5090e0',desc:'Full agent identity definitions — who the agent is, how it behaves, its constraints'},
+    'skills':        {icon:'◈',color:'#40c080',desc:'Scoped capability modules — teach an agent to do one specific thing well'},
+    'workflows':     {icon:'◎',color:'#f0a500',desc:'Multi-step process instructions — sequential or conditional logic for complex tasks'},
+    'tool-definitions':{icon:'◻',color:'#c080f0',desc:'Function schemas, API call patterns, MCP server configs, tool usage instructions'},
+    'domain-packs':  {icon:'◆',color:'#e08050',desc:'Deep field context — 911, legal, medical, finance, engineering, and more'},
+    'safety-filters':{icon:'◉',color:'#e05050',desc:'Output validation, content filtering, harm detection, prompt injection defense'},
+    'orchestration': {icon:'⬟',color:'#50c0e0',desc:'Multi-agent coordination, handoff protocols, agent-to-agent communication'},
+    'safety':        {icon:'◉',color:'#e05050',desc:'Output validation, content filtering, harm detection, prompt injection defense'},
+  };
+
+  const grid=document.getElementById('cat-grid');
+  if(grid && d.categories){
+    grid.innerHTML=d.categories.map(cat=>{
+      const m=meta[cat.name]||{icon:'◇',color:'#888',desc:''};
+      const label=cat.name.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
+      const n=cat.count;
+      return `<a href="/browse/?cat=${cat.name}" class="cat-card" style="--cat-color:${m.color}">
+        <div class="cat-icon">${m.icon}</div>
+        <div class="cat-name">${label}</div>
+        <div class="cat-desc">${m.desc}</div>
+        <div class="cat-count">${n} ${n===1?'file':'files'}</div>
+      </a>`;
+    }).join('');
+  }
 });
 </script>
 </body>
